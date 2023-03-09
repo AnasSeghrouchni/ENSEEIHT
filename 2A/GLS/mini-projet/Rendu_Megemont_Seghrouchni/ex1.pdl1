@@ -1,0 +1,14 @@
+process ex1 {
+	wd a {
+		1 of res1
+		2 of res2
+	}
+	wd b {}
+	wd c {
+		7 of res2
+	}
+	ws s2s from a to b
+	ws f2f from b to c
+	res res1 total 2
+	res res2 total 10
+}

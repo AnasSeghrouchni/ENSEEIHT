@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="ASCII"?>
+<petrinet:ReseauPetri xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:petrinet="http://petrinet" name="Exemple_enonce">
+  <noeud xsi:type="petrinet:Place" entrant="//@transition.5" sortants="//@transition.6" name="Concepteur" nbJeton="3"/>
+  <noeud xsi:type="petrinet:Place" entrant="//@transition.14" sortants="//@transition.15" name="Developpeur" nbJeton="2"/>
+  <noeud xsi:type="petrinet:Place" entrant="//@transition.7 //@transition.16 //@transition.23 //@transition.32" sortants="//@transition.8 //@transition.17 //@transition.24 //@transition.33" name="Machine" nbJeton="4"/>
+  <noeud xsi:type="petrinet:Place" entrant="//@transition.25" sortants="//@transition.26" name="Redacteur" nbJeton="1"/>
+  <noeud xsi:type="petrinet:Place" entrant="//@transition.34" sortants="//@transition.35" name="Testeur" nbJeton="2"/>
+  <noeud xsi:type="petrinet:Place" entrant="//@transition.0" name="Conception_ready" nbJeton="1"/>
+  <noeud xsi:type="petrinet:Transition" entrant="//@transition.1 //@transition.2" sortants="//@transition.0 //@transition.5 //@transition.7" name="Conception_start"/>
+  <noeud xsi:type="petrinet:Place" entrant="//@transition.3" sortants="//@transition.1" name="Conception_running"/>
+  <noeud xsi:type="petrinet:Place" entrant="//@transition.36 //@transition.39" sortants="//@transition.2" name="Conception_started"/>
+  <noeud xsi:type="petrinet:Transition" entrant="//@transition.4 //@transition.6 //@transition.8" sortants="//@transition.3" name="Conception_finish"/>
+  <noeud xsi:type="petrinet:Place" entrant="//@transition.37 //@transition.38" sortants="//@transition.4" name="Conception_finished"/>
+  <noeud xsi:type="petrinet:Place" entrant="//@transition.9" name="Programmation_ready" nbJeton="1"/>
+  <noeud xsi:type="petrinet:Transition" entrant="//@transition.10 //@transition.11" sortants="//@transition.9 //@transition.14 //@transition.16 //@transition.38" name="Programmation_start"/>
+  <noeud xsi:type="petrinet:Place" entrant="//@transition.12" sortants="//@transition.10" name="Programmation_running"/>
+  <noeud xsi:type="petrinet:Place" sortants="//@transition.11" name="Programmation_started"/>
+  <noeud xsi:type="petrinet:Transition" entrant="//@transition.13 //@transition.15 //@transition.17" sortants="//@transition.12" name="Programmation_finish"/>
+  <noeud xsi:type="petrinet:Place" entrant="//@transition.40" sortants="//@transition.13" name="Programmation_finished"/>
+  <noeud xsi:type="petrinet:Place" entrant="//@transition.18" name="RedactionDoc_ready" nbJeton="1"/>
+  <noeud xsi:type="petrinet:Transition" entrant="//@transition.19 //@transition.20" sortants="//@transition.18 //@transition.23 //@transition.25 //@transition.36" name="RedactionDoc_start"/>
+  <noeud xsi:type="petrinet:Place" entrant="//@transition.21" sortants="//@transition.19" name="RedactionDoc_running"/>
+  <noeud xsi:type="petrinet:Place" sortants="//@transition.20" name="RedactionDoc_started"/>
+  <noeud xsi:type="petrinet:Transition" entrant="//@transition.22 //@transition.24 //@transition.26" sortants="//@transition.21 //@transition.37" name="RedactionDoc_finish"/>
+  <noeud xsi:type="petrinet:Place" sortants="//@transition.22" name="RedactionDoc_finished"/>
+  <noeud xsi:type="petrinet:Place" entrant="//@transition.27" name="RedactionTest_ready" nbJeton="1"/>
+  <noeud xsi:type="petrinet:Transition" entrant="//@transition.28 //@transition.29" sortants="//@transition.27 //@transition.32 //@transition.34 //@transition.39" name="RedactionTest_start"/>
+  <noeud xsi:type="petrinet:Place" entrant="//@transition.30" sortants="//@transition.28" name="RedactionTest_running"/>
+  <noeud xsi:type="petrinet:Place" sortants="//@transition.29" name="RedactionTest_started"/>
+  <noeud xsi:type="petrinet:Transition" entrant="//@transition.31 //@transition.33 //@transition.35" sortants="//@transition.30 //@transition.40" name="RedactionTest_finish"/>
+  <noeud xsi:type="petrinet:Place" sortants="//@transition.31" name="RedactionTest_finished"/>
+  <transition poids="1" cible="//@noeud.6" source="//@noeud.5"/>
+  <transition poids="1" cible="//@noeud.7" source="//@noeud.6"/>
+  <transition poids="1" cible="//@noeud.8" source="//@noeud.6"/>
+  <transition poids="1" cible="//@noeud.9" source="//@noeud.7"/>
+  <transition poids="1" cible="//@noeud.10" source="//@noeud.9"/>
+  <transition poids="2" cible="//@noeud.6" source="//@noeud.0"/>
+  <transition poids="2" cible="//@noeud.0" source="//@noeud.9"/>
+  <transition poids="2" cible="//@noeud.6" source="//@noeud.2"/>
+  <transition poids="2" cible="//@noeud.2" source="//@noeud.9"/>
+  <transition poids="1" cible="//@noeud.12" source="//@noeud.11"/>
+  <transition poids="1" cible="//@noeud.13" source="//@noeud.12"/>
+  <transition poids="1" cible="//@noeud.14" source="//@noeud.12"/>
+  <transition poids="1" cible="//@noeud.15" source="//@noeud.13"/>
+  <transition poids="1" cible="//@noeud.16" source="//@noeud.15"/>
+  <transition poids="2" cible="//@noeud.12" source="//@noeud.1"/>
+  <transition poids="2" cible="//@noeud.1" source="//@noeud.15"/>
+  <transition poids="3" cible="//@noeud.12" source="//@noeud.2"/>
+  <transition poids="3" cible="//@noeud.2" source="//@noeud.15"/>
+  <transition poids="1" cible="//@noeud.18" source="//@noeud.17"/>
+  <transition poids="1" cible="//@noeud.19" source="//@noeud.18"/>
+  <transition poids="1" cible="//@noeud.20" source="//@noeud.18"/>
+  <transition poids="1" cible="//@noeud.21" source="//@noeud.19"/>
+  <transition poids="1" cible="//@noeud.22" source="//@noeud.21"/>
+  <transition poids="1" cible="//@noeud.18" source="//@noeud.2"/>
+  <transition poids="1" cible="//@noeud.2" source="//@noeud.21"/>
+  <transition poids="1" cible="//@noeud.18" source="//@noeud.3"/>
+  <transition poids="1" cible="//@noeud.3" source="//@noeud.21"/>
+  <transition poids="1" cible="//@noeud.24" source="//@noeud.23"/>
+  <transition poids="1" cible="//@noeud.25" source="//@noeud.24"/>
+  <transition poids="1" cible="//@noeud.26" source="//@noeud.24"/>
+  <transition poids="1" cible="//@noeud.27" source="//@noeud.25"/>
+  <transition poids="1" cible="//@noeud.28" source="//@noeud.27"/>
+  <transition poids="2" cible="//@noeud.24" source="//@noeud.2"/>
+  <transition poids="2" cible="//@noeud.2" source="//@noeud.27"/>
+  <transition poids="1" cible="//@noeud.24" source="//@noeud.4"/>
+  <transition poids="1" cible="//@noeud.4" source="//@noeud.27"/>
+  <transition xsi:type="petrinet:ReadArc" poids="1" cible="//@noeud.18" source="//@noeud.8"/>
+  <transition xsi:type="petrinet:ReadArc" poids="1" cible="//@noeud.21" source="//@noeud.10"/>
+  <transition xsi:type="petrinet:ReadArc" poids="1" cible="//@noeud.12" source="//@noeud.10"/>
+  <transition xsi:type="petrinet:ReadArc" poids="1" cible="//@noeud.24" source="//@noeud.8"/>
+  <transition xsi:type="petrinet:ReadArc" poids="1" cible="//@noeud.27" source="//@noeud.16"/>
+</petrinet:ReseauPetri>

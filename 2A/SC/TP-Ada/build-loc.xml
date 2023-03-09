@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Locations>
+  <Project>
+    <vfs_file>/home/aseghrou/2A/SC/TP-Ada/build.gpr</vfs_file>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/2A/SC/TP-Ada/build.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/2A/SC/TP-Ada/lr-affic.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/2A/SC/TP-Ada/build.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/2A/SC/TP-Ada/lr-affic.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/2A/SC/TP-Ada/build.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/2A/SC/TP-Ada/lr-main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/2A/SC/TP-Ada/build.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/2A/SC/TP-Ada/lr-simu.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/2A/SC/TP-Ada/build.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/2A/SC/TP-Ada/lr-synchro-basique.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/2A/SC/TP-Ada/build.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/2A/SC/TP-Ada/lr-synchro-basique.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/2A/SC/TP-Ada/build.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/2A/SC/TP-Ada/lr-synchro-exclusion.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/2A/SC/TP-Ada/build.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/2A/SC/TP-Ada/lr-synchro-exclusion2.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/2A/SC/TP-Ada/build.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/2A/SC/TP-Ada/lr-synchro-exclusion.ads</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

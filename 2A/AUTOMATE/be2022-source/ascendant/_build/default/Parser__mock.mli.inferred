@@ -1,0 +1,14 @@
+type token =
+    UL_VIRG
+  | UL_PTVIRG
+  | UL_IDENT of string
+  | UL_FIN
+  | UL_ENTIER of int
+  | UL_CROOUV
+  | UL_CROFER
+val menhir_begin_marker : int
+val xv_suite_array : unit
+val xv_element_array : unit
+val xv_array_inter : unit
+val xv_array : unit
+val menhir_end_marker : int

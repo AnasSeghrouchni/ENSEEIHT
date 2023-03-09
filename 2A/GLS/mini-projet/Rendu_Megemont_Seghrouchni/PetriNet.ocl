@@ -1,0 +1,38 @@
+import 'PetriNet.ecore'
+
+package petrinet
+
+context ReseauPetri
+inv validName('Nom invalide: ' + self.name):
+self.name.matches('[A-Za-z_][A-Za-z0-9_]*')
+
+inv uniqNames('Il y a deux places ayant le meme nom'): 
+	self.noeud
+	->select(n | n.oclIsKindOf(Noeud))
+	->collect(n | n.oclAsType(Noeud))
+	->forAll(n1,n2 | n1 = n2 or n1.name <> n2.name)
+
+context Arc
+
+inv poidsPositif('Le poids des arcs doit etre positif'): 
+	self.poids > 0
+
+inv typesDifferents('Un arc va d\'une place vers une transition ou inversement'):
+	(self.cible.oclIsKindOf(Place) and self.source.oclIsKindOf(Transition)) or (self.cible.oclIsKindOf(Transition) and self.source.oclIsKindOf(Place))
+	
+context Noeud
+inv nameIsDefined('Nom invalide: ' + self.name):
+if self.name.oclIsUndefined() then
+			false
+else
+			self.name.size() > 1 and self.name.matches('[A-Za-z_][A-Za-z_0-9]*')
+endif
+
+
+	
+context Place
+
+inv nbJetonpositif('Le nombre de jetons doit etre positif'): 
+	self.nbJeton >= 0
+
+endpackage

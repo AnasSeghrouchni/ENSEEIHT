@@ -1,0 +1,62 @@
+import 'SimplePDL.ecore'
+
+package simplepdl
+
+context Process
+--inv warningSeverity: false
+inv withMessage('Explicit message in process ' + self.name + ' (withMessage)'): true
+--inv errorSeverity: null
+
+context Process
+inv validName('Invalid name: ' + self.name):
+self.name.matches('[A-Za-z_][A-Za-z0-9_]*')
+
+context ProcessElement
+def: process(): Process =
+	Process.allInstances()
+		->select(p | p.processElements->includes(self))
+		->asSequence()->first()
+
+context WorkSequence
+inv successorAndPredecessorInSameProcess('Activities not in the same process : '
+		+ self.predecessor.name + ' in ' + self.predecessor.process().name+ ' and '
+		+ self.successor.name + ' in ' + self.successor.process().name
+):
+	self.process() = self.successor.process()
+	and self.process() = self.predecessor.process()
+
+inv notReflexive('Une WorkSequence ne peut pas etre reflexive'): self.predecessor <> self.successor
+	
+
+context WorkDefinition
+inv uniqNames('Il y a deux WorkDefinition ayant le meme nom'): 
+	self.Process.processElements
+	->select(pe | pe.oclIsKindOf(WorkDefinition))
+	->collect(pe | pe.oclAsType(WorkDefinition))
+	->forAll(w | self = w or self.name <> w.name)
+inv nameIsDefinedWD('Nom invalide :' + self.name):
+if self.name.oclIsUndefined() then
+			false
+else
+			self.name.size() > 1 and self.name.matches('[A-Za-z_][A-Za-z_0-9]*')
+endif
+
+context Ressource
+inv uniqNamesRessource('Deux ressources ne peuvent pas avoir le même nom'): self.Process.processElements
+	->select(pe | pe.oclIsKindOf(Ressource))
+	->collect(pe | pe.oclAsType(Ressource))
+	->forAll(r | self = r or self.name <> r.name)
+	
+inv quantityPositive: self.quantiteTotale > 0
+inv nameIsDefinedRessource('Nom d\'une ressource invalide :' + self.name):
+if self.name.oclIsUndefined() then
+			false
+else
+			self.name.size() > 1 and self.name.matches('[A-z][a-z_]*')
+endif
+
+context RessourceUtile
+inv quantityPositiveUtile('La quantité utile d\'une ressource doit être strictement positive'): self.quantiteRequise > 0
+
+inv quantityMax('Il ne peut pas y avoir plus de quantité utile que de quantité totale'): self.quantiteRequise <= self.ressource.quantiteTotale
+endpackage

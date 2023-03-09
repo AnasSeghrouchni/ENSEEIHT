@@ -1,0 +1,60 @@
+2022-12-14 14:15:57,660 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1725dc0f: startup date [Wed Dec 14 14:15:57 CET 2022]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2022-12-14 14:15:58,501 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[/home/aseghrou/2A/INTERGICIEL/sujet-jms/activemq_path/apache-activemq-5.14.0/data/kahadb] | org.apache.activemq.broker.BrokerService | main
+2022-12-14 14:15:58,917 | INFO  | PListStore:[/home/aseghrou/2A/INTERGICIEL/sujet-jms/activemq_path/apache-activemq-5.14.0/data/localhost/tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2022-12-14 14:15:59,055 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:tacaud.enseeiht.fr-46417-1671023758930-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2022-12-14 14:15:59,070 | INFO  | Listening for connections at: tcp://tacaud.enseeiht.fr:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2022-12-14 14:15:59,071 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2022-12-14 14:15:59,075 | INFO  | Listening for connections at: amqp://tacaud.enseeiht.fr:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2022-12-14 14:15:59,076 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2022-12-14 14:15:59,080 | INFO  | Listening for connections at: stomp://tacaud.enseeiht.fr:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2022-12-14 14:15:59,081 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2022-12-14 14:15:59,099 | INFO  | Listening for connections at: mqtt://tacaud.enseeiht.fr:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2022-12-14 14:15:59,100 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2022-12-14 14:15:59,209 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@75b21c3b{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2022-12-14 14:15:59,243 | INFO  | Listening for connections at ws://tacaud.enseeiht.fr:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2022-12-14 14:15:59,246 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2022-12-14 14:15:59,247 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:tacaud.enseeiht.fr-46417-1671023758930-0:1) started | org.apache.activemq.broker.BrokerService | main
+2022-12-14 14:15:59,248 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2022-12-14 14:15:59,250 | WARN  | Store limit is 102400 mb (current store usage is 0 mb). The data directory: /home/aseghrou/2A/INTERGICIEL/sujet-jms/activemq_path/apache-activemq-5.14.0/data/kahadb only has 37115 mb of usable space. - resetting to maximum available disk space: 37115 mb | org.apache.activemq.broker.BrokerService | main
+2022-12-14 14:15:59,251 | WARN  | Temporary Store limit is 51200 mb (current store usage is 0 mb). The data directory: /home/aseghrou/2A/INTERGICIEL/sujet-jms/activemq_path/apache-activemq-5.14.0/data only has 37115 mb of usable space. - resetting to maximum available disk space: 37115 mb | org.apache.activemq.broker.BrokerService | main
+2022-12-14 14:15:59,826 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2022-12-14 14:16:00,054 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2022-12-14 14:16:00,055 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2022-12-14 14:16:00,089 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2022-12-14 14:16:00,372 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2022-12-14 14:16:00,402 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2022-12-14 15:57:25,905 | WARN  | Transport Connection to: tcp://127.0.0.1:53152 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53152@61616
+2022-12-14 15:57:49,571 | WARN  | Transport Connection to: tcp://127.0.0.1:53154 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53154@61616
+2022-12-14 15:57:50,225 | WARN  | Transport Connection to: tcp://127.0.0.1:53156 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53156@61616
+2022-12-14 15:57:50,225 | WARN  | Transport Connection to: tcp://127.0.0.1:53158 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53158@61616
+2022-12-14 15:57:50,225 | WARN  | Transport Connection to: tcp://127.0.0.1:53160 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53160@61616
+2022-12-14 15:57:50,225 | WARN  | Transport Connection to: tcp://127.0.0.1:53162 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53162@61616
+2022-12-14 16:01:45,658 | WARN  | Transport Connection to: tcp://127.0.0.1:53246 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53246@61616
+2022-12-14 16:02:13,227 | WARN  | Transport Connection to: tcp://127.0.0.1:53248 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53248@61616
+2022-12-14 16:02:44,461 | WARN  | Transport Connection to: tcp://127.0.0.1:53334 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53334@61616
+2022-12-14 16:02:44,462 | WARN  | Transport Connection to: tcp://127.0.0.1:53330 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53330@61616
+2022-12-14 16:02:44,462 | WARN  | Transport Connection to: tcp://127.0.0.1:53332 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53332@61616
+2022-12-14 16:02:45,236 | WARN  | Transport Connection to: tcp://127.0.0.1:53328 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53328@61616
+2022-12-14 16:04:16,148 | WARN  | Transport Connection to: tcp://127.0.0.1:53340 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53340@61616
+2022-12-14 16:04:17,484 | WARN  | Transport Connection to: tcp://127.0.0.1:53338 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53338@61616
+2022-12-14 16:09:10,169 | WARN  | Transport Connection to: tcp://127.0.0.1:53420 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53420@61616
+2022-12-14 16:09:39,660 | WARN  | Transport Connection to: tcp://127.0.0.1:53422 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53422@61616
+2022-12-14 16:10:12,333 | WARN  | Transport Connection to: tcp://127.0.0.1:53610 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53610@61616
+2022-12-14 16:11:35,390 | WARN  | Transport Connection to: tcp://127.0.0.1:53608 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53608@61616
+2022-12-14 16:11:52,357 | WARN  | Transport Connection to: tcp://127.0.0.1:53614 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53614@61616
+2022-12-14 16:13:58,606 | WARN  | Transport Connection to: tcp://127.0.0.1:53622 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53622@61616
+2022-12-14 16:14:05,495 | WARN  | Transport Connection to: tcp://127.0.0.1:53618 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:53618@61616
+2022-12-16 18:06:16,723 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:tacaud.enseeiht.fr-46417-1671023758930-0:1) is shutting down | org.apache.activemq.broker.BrokerService | Thread-26
+2022-12-16 18:06:16,767 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | Thread-26
+2022-12-16 18:06:16,769 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | Thread-26
+2022-12-16 18:06:16,770 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | Thread-26
+2022-12-16 18:06:16,772 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | Thread-26
+2022-12-16 18:06:16,875 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | Thread-26
+2022-12-16 18:06:16,946 | INFO  | PListStore:[/home/aseghrou/2A/INTERGICIEL/sujet-jms/activemq_path/apache-activemq-5.14.0/data/localhost/tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | Thread-26
+2022-12-16 18:06:16,959 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-26
+2022-12-16 18:06:16,960 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-26
+2022-12-16 18:06:16,961 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | Thread-26
+2022-12-16 18:06:17,106 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:tacaud.enseeiht.fr-46417-1671023758930-0:1) uptime 2 days 3 hours | org.apache.activemq.broker.BrokerService | Thread-26
+2022-12-16 18:06:17,107 | INFO  | Apache ActiveMQ 5.14.0 (localhost, ID:tacaud.enseeiht.fr-46417-1671023758930-0:1) is shutdown | org.apache.activemq.broker.BrokerService | Thread-26
+2022-12-16 18:06:17,108 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@1725dc0f: startup date [Wed Dec 14 14:15:57 CET 2022]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | Thread-26
+2022-12-16 18:06:17,218 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | Thread-26

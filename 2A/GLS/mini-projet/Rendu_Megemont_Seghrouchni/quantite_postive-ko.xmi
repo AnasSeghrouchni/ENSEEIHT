@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simplepdl:Process
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:simplepdl="http://simplepdl"
+    xsi:schemaLocation="http://simplepdl SimplePDL.ecore"
+    name="Process_ko_quantite_totale">
+  <processElements
+      xsi:type="simplepdl:WorkDefinition"
+      linksToSuccessors="//@processElements.3"
+      name="WD1">
+    <ressourceutile
+        ressource="//@processElements.1"
+        activite="//@processElements.0"/>
+  </processElements>
+  <processElements
+      xsi:type="simplepdl:Ressource"
+      name="Ressource"
+      quantiteTotale="65"/>
+  <processElements
+      xsi:type="simplepdl:WorkDefinition"
+      linksToPredecessors="//@processElements.3"
+      name="WD2"/>
+  <processElements
+      xsi:type="simplepdl:WorkSequence"
+      predecessor="//@processElements.0"
+      successor="//@processElements.2"/>
+</simplepdl:Process>

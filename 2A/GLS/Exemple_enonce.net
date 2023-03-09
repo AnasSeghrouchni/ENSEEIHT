@@ -1,0 +1,30 @@
+net Exemple_enonce
+pl Concepteur (3)
+pl Developpeur (2)
+pl Machine (4)
+pl Redacteur (1)
+pl Testeur (2)
+pl Conception_ready (1)
+pl Conception_running (0)
+pl Conception_started (0)
+pl Conception_finished (0)
+pl Programmation_ready (1)
+pl Programmation_running (0)
+pl Programmation_started (0)
+pl Programmation_finished (0)
+pl RedactionDoc_ready (1)
+pl RedactionDoc_running (0)
+pl RedactionDoc_started (0)
+pl RedactionDoc_finished (0)
+pl RedactionTest_ready (1)
+pl RedactionTest_running (0)
+pl RedactionTest_started (0)
+pl RedactionTest_finished (0)
+tr Conception_start Conception_ready Concepteur*2 Machine*2 -> Conception_running Conception_started 
+tr Conception_finish Conception_running -> Conception_finished Concepteur*2 Machine*2 
+tr Programmation_start Programmation_ready Developpeur*2 Machine*3 Conception_finished?1 -> Programmation_running Programmation_started 
+tr Programmation_finish Programmation_running -> Programmation_finished Developpeur*2 Machine*3 
+tr RedactionDoc_start RedactionDoc_ready Machine Redacteur Conception_started?1 -> RedactionDoc_running RedactionDoc_started 
+tr RedactionDoc_finish RedactionDoc_running Conception_finished?1 -> RedactionDoc_finished Machine Redacteur 
+tr RedactionTest_start RedactionTest_ready Machine*2 Testeur Conception_started?1 -> RedactionTest_running RedactionTest_started 
+tr RedactionTest_finish RedactionTest_running Programmation_finished?1 -> RedactionTest_finished Machine*2 Testeur 

@@ -1,0 +1,73 @@
+p 210.0 45.0 Conception_ready 1 n
+p 435.0 35.0 RedactionTest_ready 1 n
+t 430.0 185.0 RedactionTest_start e 0 w n {} ne
+p 435.0 320.0 RedactionTest_running 0 n
+t 445.0 440.0 RedactionTest_finish e 0 w n {} ne
+p 440.0 615.0 RedactionTest_finished 0 n
+t 205.0 190.0 Conception_start e 0 w n {} ne
+p 200.0 330.0 Conception_running 0 n
+t 200.0 420.0 Conception_finish s 0 w n {} ne
+t 670.0 185.0 RedactionDoc_start e 0 w n {} ne
+p 675.0 340.0 RedactionDoc_running 0 n
+t 680.0 445.0 RedactionDoc_finish 0 w n
+p 675.0 610.0 RedactionDoc_finished 0 n
+p 845.0 620.0 Programmation_finished 0 n
+t 840.0 445.0 Programmation_finish e 0 w n {} ne
+p 840.0 335.0 Programmation_running 0 n
+t 845.0 185.0 Programmation_start e 0 w n {} ne
+p 840.0 45.0 Programmation_ready 1 n
+p 665.0 30.0 RedactionDoc_ready 1 n
+p 940.0 350.0 Developpeur 2 n
+p 470.0 205.0 RedactionTest_started 0 e
+p 700.0 220.0 RedactionDoc_started 0 e
+p 570.0 285.0 Testeur 2 n
+p 625.0 290.0 Redacteur 1 n
+p 570.0 760.0 Machine 4 s
+p 945.0 230.0 Programmation_started 0 e
+p 300.0 255.0 Conception_started 0 se
+p 35.0 305.0 Concepteur 3 n
+p 200.0 565.0 Conception_finished 0 n
+e RedactionTest_finish RedactionTest_finished 1 n
+e RedactionTest_finish Machine 2 n
+e RedactionTest_finish Testeur 1 n
+e Programmation_finished RedactionTest_finish ?1 n
+e RedactionTest_running RedactionTest_finish 1 n
+e RedactionTest_start RedactionTest_running 1 n
+e RedactionTest_start RedactionTest_started 1 n
+e Conception_started RedactionTest_start ?1 n
+e RedactionTest_ready RedactionTest_start 1 n
+e Machine RedactionTest_start 2 n
+e Testeur RedactionTest_start 1 n
+e RedactionDoc_finish RedactionDoc_finished 1 n
+e RedactionDoc_finish Machine 1 n
+e RedactionDoc_finish Redacteur 1 n
+e Conception_finished RedactionDoc_finish ?1 n
+e RedactionDoc_running RedactionDoc_finish 1 n
+e RedactionDoc_start RedactionDoc_running 1 n
+e RedactionDoc_start RedactionDoc_started 1 n
+e Conception_started RedactionDoc_start ?1 n
+e RedactionDoc_ready RedactionDoc_start 1 n
+e Machine RedactionDoc_start 1 n
+e Redacteur RedactionDoc_start 1 n
+e Programmation_finish Programmation_finished 1 n
+e Programmation_finish Developpeur 2 n
+e Programmation_finish Machine 3 n
+e Programmation_running Programmation_finish 1 n
+e Programmation_start Programmation_running 1 n
+e Programmation_start Programmation_started 1 n
+e Conception_finished Programmation_start ?1 n
+e Programmation_ready Programmation_start 1 n
+e Developpeur Programmation_start 2 n
+e Machine Programmation_start 3 n
+e Conception_finish Conception_finished 1 n
+e Conception_finish Concepteur 2 n
+e Conception_finish Machine 2 n
+e Conception_running Conception_finish 1 n
+e Conception_start Conception_running 1 n
+e Conception_start Conception_started 1 n
+e Conception_ready Conception_start 1 n
+e Concepteur Conception_start 2 n
+e Machine Conception_start 2 n
+h Exemple_enonce small
+
+

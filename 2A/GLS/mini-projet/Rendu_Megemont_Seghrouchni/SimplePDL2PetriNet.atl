@@ -1,0 +1,104 @@
+module SimplePDL2PetriNet;
+create OUT: petrinet from  IN: simplepdl;
+
+-- Obtenir le processus qui contient ce process element.
+-- Remarque: Ce helper ne serait pas utile si une r�f�rence opposite
+-- avait �t� plac�e entre Process et ProcessElement
+helper context simplepdl!ProcessElement
+def: getProcess(): simplepdl!Process =
+	simplepdl!Process.allInstances()
+		->select(p | p.processElements->includes(self))
+		->asSequence()->first();
+
+-- Traduire un Process en un PetriNet de m�me nom
+rule Process2PetriNet {
+	from p: simplepdl!Process
+	to pn: petrinet!ReseauPetri (name <- p.name)
+}
+
+-- Traduire une WorkDefinition en un motif sur le r�seau de Petri
+rule WorkDefinition2PetriNet {
+	from wd: simplepdl!WorkDefinition
+	to
+		-- PLACES d'une WorkDefinition
+		p_ready: petrinet!Place(
+				name <- wd.name + '_ready',
+				nbJeton <- 1),
+				
+		p_started: petrinet!Place(
+				name <- wd.name + '_started',
+				nbJeton <- 0),
+				
+		p_running: petrinet!Place(
+				name <- wd.name + '_running',
+				nbJeton <- 0),
+				
+		p_finished: petrinet!Place(
+				name <- wd.name + '_finished',
+				nbJeton <- 0),
+				
+		-- TRANSITIONS d'une workDefinition
+		p_start: petrinet!Transition(
+			name <- wd.name + '_start'),
+			
+		p_finish: petrinet!Transition(
+			name <- wd.name + '_finish'),
+			
+		-- ARCS d'une workDefinition
+		arc1: petrinet!Arc(
+			source <- p_ready,
+			cible <- p_start,
+			poids <- 1),
+			
+		arc2: petrinet!Arc(
+			source <- p_start,
+			cible <- p_started,
+			poids <- 1),
+			
+		arc3: petrinet!Arc(
+			source <- p_start,
+			cible <- p_running,
+			poids <- 1),
+			
+		arc4: petrinet!Arc(
+			source <- p_running,
+			cible <- p_finish,
+			poids <- 1),
+			
+		arc5: petrinet!Arc(
+			source <- p_finish,
+			cible <- p_finished,
+			poids <- 1)	
+}
+-- Traduire une Ressource en un motif sur le r�seau de Petri
+rule Ressource2PetriNet {
+	from r: simplepdl!Ressource
+	to
+		-- PLACES d'une ressource
+		p_ressource: petrinet!Place(
+			name <- r.name,
+			nbJeton <- r.quantiteTotale)	
+}
+
+rule WorkSequence2PetriNet {
+	from ws: simplepdl!WorkSequence
+	to
+		rdarc: petrinet!ReadArc(
+            source <- thisModule.resolveTemp(ws.successor, if ws.linkType.toString().equals('startToStart') or ws.linkType.toString().equals('startToFinish')  then 'p_started' else 'p_finished' endif),
+            cible <- thisModule.resolveTemp(ws.successor, if ws.linkType.toString().equals('startToStart') or ws.linkType.toString().equals('finishToStart')  then 'p_start' else 'p_finish' endif),
+            poids <- 1)
+}
+
+rule RessourceUtile2PetriNet{
+	from ru: simplepdl!RessourceUtile
+	to
+		arc_debut: petrinet!Arc(
+			source <- thisModule.resolveTemp(ru.ressource,'p_ressource'),
+			cible <- thisModule.resolveTemp(ru.activite, 'p_start'),
+			poids <- ru.quantiteRequise),
+		arc_fin:  petrinet!Arc(
+			cible <- thisModule.resolveTemp(ru.ressource,'p_ressource'),
+			source <- thisModule.resolveTemp(ru.activite, 'p_finish'),
+			poids <- ru.quantiteRequise)
+	
+}
