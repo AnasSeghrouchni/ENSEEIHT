@@ -1,0 +1,66 @@
+File allumettes/Arbitre.java: 410 tokens, 98 lines
+File allumettes/JeuReel.java: 141 tokens, 57 lines
+File allumettes/StratHumaine.java: 170 tokens, 39 lines
+File allumettes/CoupInvalideException.java: 68 tokens, 39 lines
+File allumettes/Joueur.java: 81 tokens, 46 lines
+File allumettes/OperationInterditeException.java: 21 tokens, 13 lines
+File allumettes/JeuTriche.java: 77 tokens, 41 lines
+File allumettes/StratTricheuse.java: 81 tokens, 18 lines
+File allumettes/ConfigurationException.java: 21 tokens, 16 lines (not NL-terminated)
+File allumettes/StratExperte.java: 75 tokens, 15 lines
+File allumettes/StratNaive.java: 70 tokens, 22 lines
+File allumettes/Jouer.java: 467 tokens, 82 lines
+File allumettes/Jeu.java: 23 tokens, 25 lines
+File allumettes/StratRapide.java: 46 tokens, 19 lines
+File allumettes/Strategie.java: 14 tokens, 11 lines
+Total input: 15 files (15 new, 0 old), 1765 tokens
+
+allumettes/Jouer.java: line 43-45 [31]
+allumettes/Jouer.java: line 47-48
+< 				String[] p1 = args[debut].split("@");
+< 
+< 				Joueur j1 = new Joueur(p1[0], stringtoStrategie(p1[1], p1[0]));
+---
+> 				String[] p2 = args[debut + 1].split("@");
+> 				Joueur j2 = new Joueur(p2[0], stringtoStrategie(p2[1], p2[0]));
+
+allumettes/Jouer.java: line 12-15 [31]
+allumettes/Jouer.java: line 16-19
+< 		if (s.equals("naif")) {
+< 			return new StratNaive();
+< 		} else if (s.equals("humain")) {
+< 			return new StratHumaine(nom);
+---
+> 		} else if (s.equals("rapide")) {
+> 			return new StratRapide();
+> 		} else if (s.equals("expert")) {
+> 			return new StratExperte();
+
+allumettes/Arbitre.java: line 19-24 [31]
+allumettes/Arbitre.java: line 33-38
+< 	public Arbitre(Joueur player1, Joueur player2) {
+< 		assert (player1 != null);
+< 		assert (player2 != null);
+< 		this.j1 = player1;
+< 		this.j2 = player2;
+< 		this.confiant = false;
+---
+> 	public Arbitre(Joueur player1, Joueur player2, boolean c) {
+> 		assert (player1 != null);
+> 		assert (player1 != null);
+> 		this.j1 = player1;
+> 		this.j2 = player2;
+> 		this.confiant = c;
+
+allumettes/Arbitre.java: line 72-75 [29]
+allumettes/Arbitre.java: line 76-79
+< 				System.out.println();
+< 			} catch (CoupInvalideException s) {
+< 				System.out.println("Impossible ! Nombre invalide : " 
+< 					+ s.getCoup() + " (" + s.getProbleme() + ")");
+---
+> 				System.out.println();
+> 			} catch (OperationInterditeException s) {
+> 				System.out.println("Abandon de la partie car " 
+> 					+ joueur.getNom() + " triche !");
+

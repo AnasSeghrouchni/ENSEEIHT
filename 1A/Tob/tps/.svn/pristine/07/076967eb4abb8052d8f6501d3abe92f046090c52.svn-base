@@ -1,0 +1,45 @@
+package allumettes;
+
+public class JeuReel implements Jeu {
+
+	/** Le nombre d'allumettes qu'il reste dans le jeu*/
+	private int nb_allumettes;
+
+	/**Constructeur du jeu réel
+	 * @param nb_all le nombre d'allumettes.
+	 */
+	public JeuReel(int nb_all) {
+		this.nb_allumettes=nb_all;
+	}
+
+	/** Obtenir le nombre d'allumettes encore en jeu.
+	 * @return nombre d'allumettes encore en jeu
+	 */
+	public int getNombreAllumettes() {
+		return this.nb_allumettes;
+	}
+
+	/** Affiche le nombre d'allumettes restantes.
+	 */
+	public String toString() {
+		return "Allumettes restantes : " + this.nb_allumettes;
+	}
+
+	/**Retirer des allumettes.
+	 * @param nbPrises le nombre d'allumettes à retirer.
+	 * @param confiant indique si l'arbitre a confiance en les joueurs.
+	 * @throws CoupInvalideException si le nombre d'allumettes à retirer n'est pas conforme aux règles.
+	 */
+	public void retirer(int nbPrises) throws CoupInvalideException {
+		if (nbPrises<=this.nb_allumettes){
+			if (nbPrises>=1) {
+				if (nbPrises<=Jeu.PRISE_MAX) {this.nb_allumettes=this.nb_allumettes-nbPrises;}
+				else {throw new CoupInvalideException(nbPrises,">"+Jeu.PRISE_MAX) ;}
+			}
+			else {throw new CoupInvalideException(nbPrises,"<1");}
+		}
+		else {throw new CoupInvalideException(nbPrises,">"+this.nb_allumettes );}
+	}
+
+
+}

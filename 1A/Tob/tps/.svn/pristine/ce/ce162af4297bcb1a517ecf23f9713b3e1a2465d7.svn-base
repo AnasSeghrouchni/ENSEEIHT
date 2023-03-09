@@ -1,0 +1,37 @@
+package allumettes;
+
+public class JeuTriche implements Jeu {
+	
+	/** Jeu sans triche*/
+	private Jeu SansTriche;
+	
+	/**Constructeur du JeuTriche
+	 * @param jeu le jeu sans triche.
+	 */
+	public JeuTriche(Jeu jeu) {
+		assert(jeu!=null);
+		this.SansTriche=jeu;
+	}
+	
+	/** Obtenir le nombre d'allumettes encore en jeu.
+	 * @return nombre d'allumettes encore en jeu
+	 */
+	public int getNombreAllumettes() {
+		return this.SansTriche.getNombreAllumettes();
+	}
+	
+	/** Affiche le nombre d'allumettes restantes.
+	 */
+	public String toString() {
+		return this.SansTriche.toString();
+	}
+	
+	/**Retirer des allumettes en propageant une exception de triche.
+	 * @param nbPrises le nombre d'allumettes à retirer.
+	 * @throws OperationInterditeException 
+	 */
+	public void retirer(int nbPrises)  {
+			throw new OperationInterditeException("Vous trichez là");
+	}
+	
+}

@@ -1,0 +1,21 @@
+
+Les Q# font référence aux questions posées dans le fichier LISEZ-MOI.txt.
+Les pénalités '+' seront évaluées manuellement (enseignant de TP).
+Les pénalités '+' peuvent donner lieu à des pénalités définitives en V1 (si le travail est jugé insuffisant).
+
++ C3 : Qualité du source de l'application : 1 pt
+    - structuration/commentaires (en particulier pour traitement des arguments de la ligne de commande)
+    - redondance (en particulier pour traitement des arguments de la ligne de commande)
+    - mieux structurer/factoriser le code pour traitement des arguments de la ligne de commande -> méthode privée
+     - Les constructeurs de Arbitre peuvent etre factorisés, celui avec que les Joueurs peut appeler l'autre avec confiant = true. D'ailleurs sinon confiant n'est jamais initialisé dans ce constructeur.
+
+
++ L3 : Non complété : 1 pt
+    - Question 1
+        oui, mais pourquoi ne pas la declarer...? C'est quoi le but du Proxy?
+    - Question 2 OK
+    - Question 3 OK
+
+
+
++ Correction sur les pénalités automatiques : 0

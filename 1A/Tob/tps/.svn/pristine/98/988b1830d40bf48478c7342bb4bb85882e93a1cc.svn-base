@@ -1,0 +1,39 @@
+package allumettes;
+
+import java.util.Scanner;
+
+public class StratHumaine implements Strategie{	
+	private String nom;
+	
+	public StratHumaine(String n) {
+		this.nom=n;
+	}
+	
+	public int getPrise(Jeu jeu) {
+		int prise=-1;
+		String string_prise;
+		boolean nbpris=false;			//Boolean qui indique si un entier a été pris.
+
+		 while (!nbpris) {
+				System.out.print(this.nom+", combien d'allumettes ? ");
+				 Scanner prendre = new Scanner(System.in);	
+		 try {
+			 string_prise  =  prendre.nextLine();
+			 if (string_prise.equals("triche")){
+				 jeu.retirer(1);
+				 System.out.println("[Une allumette en moins, plus que "+jeu.getNombreAllumettes()+". Chut !]");
+			 }
+			 else {prise= Integer.parseInt(string_prise);
+			 nbpris=!nbpris;
+			 }
+		 }
+		 catch(CoupInvalideException s) {
+			 System.out.println("Cette exception n'est pas censée se produire.");
+		 }
+		 catch(NumberFormatException s) {
+			 System.out.println("Vous devez donner un entier.");
+	}
+		 }
+		 return prise;
+	}
+}

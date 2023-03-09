@@ -1,0 +1,3 @@
+Pour execcuter le projet, vu qu'on n'a pas pu creer de .jar, nous utilisons le pack d'extensions java de VScode, et nous executons ensuite grace au triangle en haut a droite de l'ecran qui s'affiche apres avoir ouvert un fichier .java quelconque. Nous avons essaye toutes les methodes possibles pour creer le jar mais rien n'a marche.
+Nous avons mis le jar genere dans le svn mais nous avons une erreur no main in manifest.
+nous avons essaye de la metre a jour avec la commande jar -um <fichier jar> <fichier texte> et l'erreur persiste

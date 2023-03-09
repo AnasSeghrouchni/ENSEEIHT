@@ -1,0 +1,58 @@
+package allumettes;
+
+public class Arbitre {
+	/**Le joueur 1*/
+	private Joueur j1;
+	
+	/**Le joueur 2*/
+	private Joueur j2;
+	
+	/**Constructeur de l'arbitre.
+	 * 
+	 * @param player1 le joueur 1
+	 * @param player2 le joueur 2
+	 */
+	public Arbitre(Joueur player1, Joueur player2) {
+		assert(player1!=null);
+		assert(player1!=null);
+		this.j1=player1;
+		this.j2=player2;
+	}
+	
+	public void arbitrer(Jeu jeu) {
+		boolean tourj1;
+		Joueur joueur;
+		assert(jeu!=null);
+		assert(jeu.getNombreAllumettes()>0);
+		tourj1=true;
+		while (jeu.getNombreAllumettes()>0){
+	
+			if (tourj1) {joueur=j1;}
+			else {joueur =j2;}
+			System.out.println(jeu.toString());
+			try {
+				int prise = joueur.getPrise(new JeuTriche(jeu));
+				if (prise==1) { System.out.println(joueur.getNom()+" prend "+1+" allumette.");}
+				else {System.out.println(joueur.getNom()+" prend "+prise+" allumettes.");}
+				jeu.retirer(prise);
+				tourj1=!tourj1;
+				System.out.println();
+				}
+				catch(CoupInvalideException s){
+					System.out.println("Impossible ! Nombre invalide :"+s.getCoup()+s.getProbleme());
+					System.out.println();
+				}
+			}
+		Joueur gagnant;
+		Joueur perdant;
+		if (tourj1) {gagnant=j1;
+					perdant=j2;}
+		else {gagnant=j2;
+			perdant=j1;}
+			System.out.println(perdant.getNom() + " perd !");
+			System.out.println(gagnant.getNom()+ " gagne !");
+		
+		}
+		
+	}
+

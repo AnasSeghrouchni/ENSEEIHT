@@ -1,0 +1,11 @@
+{
+    "java.dependency.packagePresentation": "hierarchical",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "Dependencies/gson-2.9.0.jar"
+    ],
+    "java.project.sourcePaths": [
+        "Dependencies",
+        "."
+    ]
+}

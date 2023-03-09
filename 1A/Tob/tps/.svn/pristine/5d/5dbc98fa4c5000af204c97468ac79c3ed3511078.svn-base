@@ -1,0 +1,16 @@
+package allumettes;
+
+public class StratRapide implements Strategie {
+	
+	/** Renvoie le nombre d'allumettes pris selon la stratégie rapide,
+	 *  consistant à prendre le maximum d'allumettes possibles.
+	 *  @param Jeu le jeu en cours.
+	 */
+	public int getPrise(Jeu jeu) {
+		if (jeu.getNombreAllumettes()>=3) {
+			return 3;
+		}
+		else {return jeu.getNombreAllumettes();}
+	}
+
+}

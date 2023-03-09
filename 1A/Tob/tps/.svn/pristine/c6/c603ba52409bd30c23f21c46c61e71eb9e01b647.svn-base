@@ -1,0 +1,35 @@
+import java.util.List;
+
+/** Quelques outils (méthodes) sur les listes.  */
+public class Outils {
+
+	/** Retourne vrai ssi tous les éléments de la collection respectent le critère. */
+	public static <E extends F,F> boolean tous(
+			List<E> elements,
+			Critere<F> critere)
+	{boolean crit=true;
+	int i=0;
+		while (crit && i<elements.size()){
+			crit=critere.satisfaitSur(elements.get(i));
+			i++;
+		}
+		return  crit;
+	}
+
+
+	/** Ajouter dans resultat tous les éléments de la source
+	 * qui satisfont le critère aGarder.
+	 */
+	public static <E extends F,F extends G,G> void filtrer(
+			List<E> source,
+			Critere<F> aGarder,
+			List<G> resultat)
+	{
+		for (E o : source) {
+			if (aGarder.satisfaitSur(o)){
+				resultat.add(o);
+			}
+		}
+	}
+
+}

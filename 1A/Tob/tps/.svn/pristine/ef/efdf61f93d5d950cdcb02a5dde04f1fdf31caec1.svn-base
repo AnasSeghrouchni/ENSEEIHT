@@ -1,0 +1,27 @@
+1c1
+< Allumettes restantes : 3
+---
+> Allumettes restantes : 13
+4c4,10
+< Allumettes restantes : 2
+---
+> Allumettes restantes : 12
+> Ordinateur prend 3 allumettes.
+> 
+> Allumettes restantes : 9
+> Xavier, combien d'allumettes ? Xavier prend 3 allumettes.
+> 
+> Allumettes restantes : 6
+7c13,14
+< Allumettes restantes : 1
+---
+> Allumettes restantes : 5
+> Xavier, combien d'allumettes ? [Une allumette en moins, plus que 4. Chut !]
+9d15
+< Impossible ! Nombre invalide : 3 (>1)
+12,14c18
+< Xavier, combien d'allumettes ? [Une allumette en moins, plus que 0. Chut !]
+< Xavier, combien d'allumettes ? Xavier prend 3 allumettes.
+< Impossible ! Nombre invalide : 3 (>0)
+---
+> Ordinateur prend 1 allumette.

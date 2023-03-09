@@ -1,0 +1,26 @@
+8,13c8,25
+< Xavier, combien d'allumettes ? Exception in thread "main" java.util.NoSuchElementException: No line found
+< 	at java.base/java.util.Scanner.nextLine(Scanner.java:1651)
+< 	at allumettes.StratHumaine.getPrise(StratHumaine.java:21)
+< 	at allumettes.Joueur.getPrise(Joueur.java:40)
+< 	at allumettes.Arbitre.arbitrer(Arbitre.java:60)
+< 	at allumettes.Jouer.main(Jouer.java:48)
+---
+> Xavier, combien d'allumettes ? Vous devez donner un entier.
+> Xavier, combien d'allumettes ? Xavier prend 5 allumettes.
+> Impossible ! Nombre invalide : 5 (> 3)
+> 
+> Allumettes restantes : 8
+> Xavier, combien d'allumettes ? Xavier prend 3 allumettes.
+> 
+> Allumettes restantes : 5
+> Ordinateur prend 3 allumettes.
+> 
+> Allumettes restantes : 2
+> Xavier, combien d'allumettes ? Xavier prend 1 allumette.
+> 
+> Allumettes restantes : 1
+> Ordinateur prend 1 allumette.
+> 
+> Ordinateur perd !
+> Xavier gagne !

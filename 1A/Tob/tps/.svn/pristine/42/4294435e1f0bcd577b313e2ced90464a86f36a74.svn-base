@@ -1,0 +1,23 @@
+
+# Remarques générales ################################################
+
+Tenir compte des remarques générales disponibles via Moodle
+et de l'évaluation automatique disponible sur votre SVN via `svn update`.
+
+Elles ne sont pas reprises ici !
+
+
+# LISEZ-MOI.txt ######################################################
+
+* Question 1 : Pas de réponse
+
+* Question 2 : Pas de réponse
+
+
+# Remarques supplémentaires ##########################################
+
+* Selon la convention Java les attributs de la classe on le declare au debut de la classe.
+
+* Ajouter la doc pour les attributs dans le format javadoc /** ...  */
+
+* remonter le constructeur Cercle(Point point1, Point point2) en haut, la convention Java est de mettre d'abord tous les constructeurs et apres les autres methodes

@@ -1,0 +1,8 @@
+10c10
+< Xavier, combien d'allumette ? Xavier prend 1 allumette.
+---
+> Xavier, combien d'allumette ? Xavier prend 0 allumette.
+48c48
+< Xavier, combien d'allumette ? Xavier prend 1 allumette.
+---
+> Xavier, combien d'allumette ? Xavier prend 0 allumette.

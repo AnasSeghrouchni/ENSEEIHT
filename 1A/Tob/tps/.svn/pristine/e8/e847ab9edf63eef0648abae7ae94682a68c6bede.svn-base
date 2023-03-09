@@ -1,0 +1,31 @@
+package allumettes;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class StratHumaine implements Strategie{	
+	private String nom;
+	
+	public StratHumaine(String n) {
+		this.nom=n;
+	}
+	
+	public int getPrise(Jeu jeu) {
+		int prise=-1;
+		boolean nbpris=false;			//Boolean qui indique si un entier a été pris.
+
+		 while (!nbpris) {
+				System.out.print(this.nom+", combien d'allumettes ? ");
+				 Scanner prendre = new Scanner(System.in);	
+		 try {
+			 prise    =  prendre.nextInt();
+			 //prendre.close();
+			 nbpris=!nbpris;
+			 
+		 }
+		 catch(InputMismatchException s) {
+			 System.out.println("Vous devez donner un entier.");
+	}
+		 }
+		 return prise;
+	}
+}

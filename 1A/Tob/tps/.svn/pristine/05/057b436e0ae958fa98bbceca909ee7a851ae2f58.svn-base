@@ -1,0 +1,10 @@
+Allumettes restantes : 13
+Max, combien d'allumettes ? Max prend 2 allumettes.
+
+Allumettes restantes : 11
+Lou, combien d'allumettes ? Exception in thread "main" java.util.NoSuchElementException: No line found
+	at java.base/java.util.Scanner.nextLine(Scanner.java:1651)
+	at allumettes.StratHumaine.getPrise(StratHumaine.java:22)
+	at allumettes.Joueur.getPrise(Joueur.java:40)
+	at allumettes.Arbitre.arbitrer(Arbitre.java:60)
+	at allumettes.Jouer.main(Jouer.java:53)

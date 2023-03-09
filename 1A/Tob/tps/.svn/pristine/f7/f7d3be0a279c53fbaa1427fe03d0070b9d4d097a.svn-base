@@ -1,0 +1,45 @@
+package allumettes;
+
+public class Joueur {
+
+	/** Nom du joueur */
+	private String nom;
+
+	/** Stratégie du joueur */
+	private Strategie strat;
+
+	/**La strategie du joueur*/
+	public Joueur(String n, Strategie strategie){
+		this.nom= n;
+		this.strat=strategie;
+	}
+
+	/**
+	 * Renvoie le nom du joueur.
+	 * @return Le nom du joueur.
+	 */
+	public String getNom(){
+		return this.nom;
+	}
+
+	/**
+	 * Renoie la stratégie du joueur.
+	 * @return la stratégie du joueur.
+	 */
+	public Strategie getStrategie() {
+		return this.strat;
+	}
+
+	/**
+	 * Renvoie la prise du joueur
+	 * @param jeu le jeu en cours
+	 * @return la prise effectuée par ce joueur.
+	 */
+	public int getPrise(Jeu jeu) {
+		assert(jeu!=null);
+		return this.strat.getPrise(jeu);
+	}
+
+
+}
+

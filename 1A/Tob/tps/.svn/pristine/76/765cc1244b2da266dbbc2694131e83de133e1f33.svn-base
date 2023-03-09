@@ -1,0 +1,4 @@
+Allumettes restantes : 13
+Exception in thread "main" java.lang.NullPointerException
+	at allumettes.Arbitre.arbitrer(Arbitre.java:56)
+	at allumettes.Jouer.main(Jouer.java:62)

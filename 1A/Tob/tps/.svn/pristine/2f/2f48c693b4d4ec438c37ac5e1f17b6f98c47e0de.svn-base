@@ -1,0 +1,75 @@
+Date de l'évaluation : sam. 02 avril 2022 14:12:10 CEST
+
+Nombre de similitudes (voir evaluations/evaluation1/sim_java.txt) : 2
+Les similitudes indiquent généralement du code à restructurer.
+
+Erreurs checkstyle (différentes/types) : 19/7	(voir evaluations/evaluation1//checkstyle.log)
+
+Classe OperationInterditeException : OperationInterditeException (ok)
+
+Procuration sur le jeu réel : allumettes/JeuTriche.java (ok)
+
+OperationInterditeException, levée dans : allumettes/JeuTriche.java (ok)
+OperationInterditeException, récupérée dans : allumettes/Arbitre.java (ok)
+
+Throwable, Exception et RuntimeException ne devraient pas être récupérées car trop générales... ok
+
+AssertionError ne doit pas être récupérée... ok
+
+Autres exceptions récupérées :
+  | allumettes/Arbitre.java:68:         } catch (CoupInvalideException s) {
+  | allumettes/StratHumaine.java:31:            } catch (CoupInvalideException s) {
+  | allumettes/StratHumaine.java:33:            } catch (NumberFormatException s) {
+  | allumettes/StratTricheuse.java:11:      } catch (CoupInvalideException e) {
+  | allumettes/Jouer.java:64:       } catch (ConfigurationException e) {
+
+Utilisation de 'Scanner' : ok
+  | allumettes/StratHumaine.java:7: static Scanner prendre;
+  | allumettes/StratHumaine.java:11:        StratHumaine.prendre = new Scanner(System.in);
+
+Utilisation de 'split' : ok
+  | allumettes/Jouer.java:37:       String[] p = args.split("@");
+
+Utilisation de 'Random' : ok
+  | allumettes/StratNaive.java:3:import java.util.Random;
+  | allumettes/StratNaive.java:7:   private Random alatoire;
+  | allumettes/StratNaive.java:10:      this.alatoire = new Random();
+
+Utilisation de '3' : ok
+
+Affichage de 'Impossible !' : ok
+
+Utilisation de 'System.exit' : ok
+
+Compilation de Jouer.java : OK.
+Compilation de Arbitre.java : OK.
+Compilation de StratTest.java : OK.
+Test exemplePresqueSujet : NON CONFORME (voir evaluations/evaluation1/exemplePresqueSujet.diff)
+Test exempleTricheurSujet : NON CONFORME (voir evaluations/evaluation1/exempleTricheurSujet.diff)
+Test exempleConfiantTricheurSujet : NON CONFORME (voir evaluations/evaluation1/exempleConfiantTricheurSujet.diff)
+Test exempleRobustesse : NON CONFORME (voir evaluations/evaluation1/exempleRobustesse.diff)
+Test exempleHumainTricheurExpert : NON CONFORME (voir evaluations/evaluation1/exempleHumainTricheurExpert.diff)
+Test exempleMaxLou : NON CONFORME (voir evaluations/evaluation1/exempleMaxLou.diff)
+Test exempleRapideRapide : NON CONFORME (voir evaluations/evaluation1/exempleRapideRapide.diff)
+Test exempleTricheurExpert : NON CONFORME (voir evaluations/evaluation1/exempleTricheurExpert.diff)
+
+Test RobustesseTest : Tests run: 25,  Failures: 4	(voir evaluations/evaluation1/RobustesseTest.log)
+    1) testerNomNonDefini(RobustesseTest)
+        NullPointerException
+    2) testerNomNonDefiniConfiant(RobustesseTest)
+        NullPointerException
+    3) testerNomNonDefiniSymetrieConfiant(RobustesseTest)
+        NullPointerException
+    4) testerNomNonDefiniSymetrie(RobustesseTest)
+        NullPointerException
+
+
+On recommence avec les classes/interfaces fournies : Jeu ConfigurationException CoupInvalideException
+Compilation de Jouer.java : OK.
+Compilation de Arbitre.java : OK.
+
+Vérification du respect du diagramme de classe...
+Test FormeTest : OK (2 tests)	(voir evaluations/evaluation1/FormeTest.log)
+
+Compilation de StratTest.java : OK.
+Test allumettes.StratTest : OK (1 test)	(voir evaluations/evaluation1/allumettes.StratTest.log)

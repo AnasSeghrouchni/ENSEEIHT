@@ -1,0 +1,15 @@
+
+- Pour chaque équipier, remplacer 0 par la note que vous lui attribuez.
+- Chaque note doit être entre 0 et 3.
+- La somme des notes doit être inférieure ou égale à 6.
+- 1    1.0  0.5  1.3333  sont des notes correctes.
+- 1/3  1,5  -0.4 4  sont des notes incorrectes.
+- Ne pas changer les lignes suivantes, sauf le 0 bien sûr.
+
+
+Jeremie CARREZ (jcarrez)       : 0
+Nohe HINNIGER-FORAY (nhinnige) : 0
+Emile JEANDON (ejeandon)       : 0
+Ismail KALLEL (ikallel)        : 0
+Aymane KSSIM (akssim)          : 0
+Leo LAZARE (llazare)           : 0

@@ -1,0 +1,8 @@
+package allumettes;
+
+public interface Strategie {
+	/** Permet d'obtenir le nombre d'allumettes pris en fonction de la stratégie adoptée.
+	 * @param Jeu le jeu en cours
+	 */
+	public int getPrise(Jeu jeu);
+}

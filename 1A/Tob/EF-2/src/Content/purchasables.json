@@ -1,0 +1,694 @@
+[
+  {
+    "name": "Pyramides",
+    "bonuses": [
+      {
+        "stat": "FOOD",
+        "staticUpgrade": 0,
+        "percentUpgrade": 0.2
+      },
+      {
+        "stat": "PRODUCTION",
+        "staticUpgrade": 0,
+        "percentUpgrade": 0.2
+      },
+      {
+        "stat": "HAPPINESS",
+        "staticUpgrade": 0,
+        "percentUpgrade": 0.2
+      }
+    ],
+    "price": 3000,
+    "era": "ANTIQUITY",
+    "isPurchased": false,
+    "type": "UNIQUE"
+  },
+  {
+    "name": "Maoi",
+    "bonuses": [
+      {
+        "stat": "FOOD",
+        "staticUpgrade": 0,
+        "percentUpgrade": 0.2
+      },
+      {
+        "stat": "PRODUCTION",
+        "staticUpgrade": 0,
+        "percentUpgrade": 0.2
+      },
+      {
+        "stat": "HAPPINESS",
+        "staticUpgrade": 0,
+        "percentUpgrade": 0.2
+      }
+    ],
+    "price": 3000,
+    "era": "ANTIQUITY",
+    "isPurchased": false,
+    "type": "UNIQUE"
+  },
+  {
+    "name": "Grenier",
+    "bonuses": [
+      {
+        "stat": "FOOD",
+        "staticUpgrade": 10,
+        "percentUpgrade": 0
+      }
+    ],
+    "price": 1000,
+    "era": "ANTIQUITY",
+    "isPurchased": false,
+    "type": "COMMUN"
+  },
+  {
+    "name": "Aqueduc",
+    "bonuses": [
+      {
+        "stat": "FOOD",
+        "staticUpgrade": 25,
+        "percentUpgrade": 0
+      }
+    ],
+    "price": 2500,
+    "era": "ANTIQUITY",
+    "isPurchased": false,
+    "type": "COMMUN"
+  },
+  {
+    "name": "Bibliothèque",
+    "bonuses": [
+      {
+        "stat": "PRODUCTION",
+        "staticUpgrade": 5,
+        "percentUpgrade": 0
+      },
+      {
+        "stat": "HAPPINESS",
+        "staticUpgrade": 10,
+        "percentUpgrade": 0
+      }
+    ],
+    "price": 1000,
+    "era": "ANTIQUITY",
+    "isPurchased": false,
+    "type": "COMMUN"
+  },
+  {
+    "name": "Cabane de Bûcheron",
+    "bonuses": [
+      {
+        "stat": "PRODUCTION",
+        "staticUpgrade": 25,
+        "percentUpgrade": 0
+      }
+    ],
+    "price": 1000,
+    "era": "ANTIQUITY",
+    "isPurchased": false,
+    "type": "COMMUN"
+  },
+  {
+    "name": "Caserne",
+    "bonuses": [
+      {
+        "stat": "PRODUCTION",
+        "staticUpgrade": 40,
+        "percentUpgrade": 0
+      }
+    ],
+    "price": 2000,
+    "era": "ANTIQUITY",
+    "isPurchased": false,
+    "type": "COMMUN"
+  },
+  {
+    "name": "Thermes",
+    "bonuses": [
+      {
+        "stat": "HAPPINESS",
+        "staticUpgrade": 25,
+        "percentUpgrade": 0
+      }
+    ],
+    "price": 1000,
+    "era": "ANTIQUITY",
+    "isPurchased": false,
+    "type": "COMMUN"
+  },
+  {
+    "name": "Amphithéâtre",
+    "bonuses": [
+      {
+        "stat": "HAPPINESS",
+        "staticUpgrade": 40,
+        "percentUpgrade": 0
+      }
+    ],
+    "price": 2000,
+    "era": "ANTIQUITY",
+    "isPurchased": false,
+    "type": "COMMUN"
+  },
+  {
+    "name": "Château-Fort",
+    "bonuses": [
+      {
+        "stat": "FOOD",
+        "staticUpgrade": 0,
+        "percentUpgrade": 0.5
+      },
+      {
+        "stat": "PRODUCTION",
+        "staticUpgrade": 0,
+        "percentUpgrade": 0.5
+      },
+      {
+        "stat": "HAPPINESS",
+        "staticUpgrade": 0,
+        "percentUpgrade": 0.5
+      }
+    ],
+    "price": 20000,
+    "era": "ANTIQUITY",
+    "isPurchased": false,
+    "type": "HDV"
+  },
+  {
+    "name": "Notre-Dame",
+    "bonuses": [
+      {
+        "stat": "FOOD",
+        "staticUpgrade": 0,
+        "percentUpgrade": 0.4
+      },
+      {
+        "stat": "PRODUCTION",
+        "staticUpgrade": 0,
+        "percentUpgrade": 0.4
+      },
+      {
+        "stat": "HAPPINESS",
+        "staticUpgrade": 0,
+        "percentUpgrade": 0.4
+      }
+    ],
+    "price": 20000,
+    "era": "MIDDLEAGE",
+    "isPurchased": false,
+    "type": "UNIQUE"
+  },
+  {
+    "name": "Colisée",
+    "bonuses": [
+      {
+        "stat": "FOOD",
+        "staticUpgrade": 0,
+        "percentUpgrade": 0.4
+      },
+      {
+        "stat": "PRODUCTION",
+        "staticUpgrade": 0,
+        "percentUpgrade": 0.4
+      },
+      {
+        "stat": "HAPPINESS",
+        "staticUpgrade": 0,
+        "percentUpgrade": 0.4
+      }
+    ],
+    "price": 20000,
+    "era": "MIDDLEAGE",
+    "isPurchased": false,
+    "type": "UNIQUE"
+  },
+  {
+    "name": "Moulin",
+    "bonuses": [
+      {
+        "stat": "FOOD",
+        "staticUpgrade": 50,
+        "percentUpgrade": 0
+      },
+      {
+        "stat": "PRODUCTION",
+        "staticUpgrade": 50,
+        "percentUpgrade": 0
+      }
+    ],
+    "price": 5000,
+    "era": "MIDDLEAGE",
+    "isPurchased": false,
+    "type": "COMMUN"
+  },
+  {
+    "name": "Ferme",
+    "bonuses": [
+      {
+        "stat": "FOOD",
+        "staticUpgrade": 100,
+        "percentUpgrade": 0
+      },
+      {
+        "stat": "PRODUCTION",
+        "staticUpgrade": 100,
+        "percentUpgrade": 0
+      }
+    ],
+    "price": 10000,
+    "era": "MIDDLEAGE",
+    "isPurchased": false,
+    "type": "COMMUN"
+  },
+  {
+    "name": "Puit",
+    "bonuses": [
+      {
+        "stat": "FOOD",
+        "staticUpgrade": 75,
+        "percentUpgrade": 0
+      }
+    ],
+    "price": 20000,
+    "era": "MIDDLEAGE",
+    "isPurchased": false,
+    "type": "COMMUN"
+  },
+  {
+    "name": "Forge",
+    "bonuses": [
+      {
+        "stat": "PRODUCTION",
+        "staticUpgrade": 75,
+        "percentUpgrade": 0
+      }
+    ],
+    "price": 20000,
+    "era": "MIDDLEAGE",
+    "isPurchased": false,
+    "type": "COMMUN"
+  },
+  {
+    "name": "Jardin",
+    "bonuses": [
+      {
+        "stat": "HAPPINESS",
+        "staticUpgrade": 25,
+        "percentUpgrade": 0
+      }
+    ],
+    "price": 20000,
+    "era": "MIDDLEAGE",
+    "isPurchased": false,
+    "type": "COMMUN"
+  },
+  {
+    "name": "Abbaye",
+    "bonuses": [
+      {
+        "stat": "HAPPINESS",
+        "staticUpgrade": 40,
+        "percentUpgrade": 0
+      }
+    ],
+    "price": 30000,
+    "era": "MIDDLEAGE",
+    "isPurchased": false,
+    "type": "COMMUN"
+  },
+  {
+    "name": "Usine",
+    "bonuses": [
+      {
+        "stat": "FOOD",
+        "staticUpgrade": 0,
+        "percentUpgrade": 1
+      },
+      {
+        "stat": "PRODUCTION",
+        "staticUpgrade": 0,
+        "percentUpgrade": 1
+      },
+      {
+        "stat": "HAPPINESS",
+        "staticUpgrade": 0,
+        "percentUpgrade": 1
+      }
+    ],
+    "price": 300000,
+    "era": "MIDDLEAGE",
+    "isPurchased": false,
+    "type": "HDV"
+  },
+  {
+    "name": "Empire State Buidling",
+    "bonuses": [
+      {
+        "stat": "FOOD",
+        "staticUpgrade": 0,
+        "percentUpgrade": 0.7
+      },
+      {
+        "stat": "PRODUCTION",
+        "staticUpgrade": 0,
+        "percentUpgrade": 0.7
+      },
+      {
+        "stat": "HAPPINESS",
+        "staticUpgrade": 0,
+        "percentUpgrade": 0.7
+      }
+    ],
+    "price": 300000,
+    "era": "INDUSTRIAL",
+    "isPurchased": false,
+    "type": "UNIQUE"
+  },
+  {
+    "name": "Tour Eiffel",
+    "bonuses": [
+      {
+        "stat": "FOOD",
+        "staticUpgrade": 0,
+        "percentUpgrade": 0.7
+      },
+      {
+        "stat": "PRODUCTION",
+        "staticUpgrade": 0,
+        "percentUpgrade": 0.7
+      },
+      {
+        "stat": "HAPPINESS",
+        "staticUpgrade": 0,
+        "percentUpgrade": 0.7
+      }
+    ],
+    "price": 300000,
+    "era": "INDUSTRIAL",
+    "isPurchased": false,
+    "type": "UNIQUE"
+  },
+  {
+    "name": "Chemin de Fer",
+    "bonuses": [
+      {
+        "stat": "FOOD",
+        "staticUpgrade": 100,
+        "percentUpgrade": 0
+      },
+      {
+        "stat": "PRODUCTION",
+        "staticUpgrade": 100,
+        "percentUpgrade": 0
+      },
+      {
+        "stat": "HAPPINESS",
+        "staticUpgrade": 30,
+        "percentUpgrade": 0
+      }
+    ],
+    "price": 50000,
+    "era": "INDUSTRIAL",
+    "isPurchased": false,
+    "type": "COMMUN"
+  },
+  {
+    "name": "Entrepôts",
+    "bonuses": [
+      {
+        "stat": "PRODUCTION",
+        "staticUpgrade": 150,
+        "percentUpgrade": 0
+      }
+    ],
+    "price": 100000,
+    "era": "INDUSTRIAL",
+    "isPurchased": false,
+    "type": "COMMUN"
+  },
+  {
+    "name": "Centrale à Charbon",
+    "bonuses": [
+      {
+        "stat": "PRODUCTION",
+        "staticUpgrade": 300,
+        "percentUpgrade": 0
+      }
+    ],
+    "price": 200000,
+    "era": "INDUSTRIAL",
+    "isPurchased": false,
+    "type": "COMMUN"
+  },
+  {
+    "name": "Usine",
+    "bonuses": [
+      {
+        "stat": "PRODUCTION",
+        "staticUpgrade": 250,
+        "percentUpgrade": 0
+      },
+      {
+        "stat": "FOOD",
+        "staticUpgrade": 250,
+        "percentUpgrade": 0
+      }
+    ],
+    "price": 150000,
+    "era": "INDUSTRIAL",
+    "isPurchased": false,
+    "type": "COMMUN"
+  },
+  {
+    "name": "Boulangerie",
+    "bonuses": [
+      {
+        "stat": "HAPPINESS",
+        "staticUpgrade": 50,
+        "percentUpgrade": 0
+      },
+      {
+        "stat": "FOOD",
+        "staticUpgrade": 200,
+        "percentUpgrade": 0
+      }
+    ],
+    "price": 100000,
+    "era": "INDUSTRIAL",
+    "isPurchased": false,
+    "type": "COMMUN"
+  },
+  {
+    "name": "Hôpital",
+    "bonuses": [
+      {
+        "stat": "HAPPINESS",
+        "staticUpgrade": 75,
+        "percentUpgrade": 0
+      }
+    ],
+    "price": 150000,
+    "era": "INDUSTRIAL",
+    "isPurchased": false,
+    "type": "COMMUN"
+  },
+  {
+    "name": "Tour Radio",
+    "bonuses": [
+      {
+        "stat": "HAPPINESS",
+        "staticUpgrade": 100,
+        "percentUpgrade": 0
+      }
+    ],
+    "price": 100000,
+    "era": "INDUSTRIAL",
+    "isPurchased": false,
+    "type": "COMMUN"
+  },
+  {
+    "name": "N7",
+    "bonuses": [
+      {
+        "stat": "FOOD",
+        "staticUpgrade": 0,
+        "percentUpgrade": 2
+      },
+      {
+        "stat": "PRODUCTION",
+        "staticUpgrade": 0,
+        "percentUpgrade": 2
+      },
+      {
+        "stat": "HAPPINESS",
+        "staticUpgrade": 0,
+        "percentUpgrade": 2
+      }
+    ],
+    "price": 1000000,
+    "era": "INDUSTRIAL",
+    "isPurchased": false,
+    "type": "HDV"
+  },
+  {
+    "name": "Robot",
+    "bonuses": [
+      {
+        "stat": "FOOD",
+        "staticUpgrade": 0,
+        "percentUpgrade": 1.7
+      },
+      {
+        "stat": "PRODUCTION",
+        "staticUpgrade": 0,
+        "percentUpgrade": 1.7
+      },
+      {
+        "stat": "HAPPINESS",
+        "staticUpgrade": 0,
+        "percentUpgrade": 1.7
+      }
+    ],
+    "price": 1000000,
+    "era": "NUMERIC",
+    "isPurchased": false,
+    "type": "UNIQUE"
+  },
+  {
+    "name": "Universal",
+    "bonuses": [
+      {
+        "stat": "FOOD",
+        "staticUpgrade": 0,
+        "percentUpgrade": 1.7
+      },
+      {
+        "stat": "PRODUCTION",
+        "staticUpgrade": 0,
+        "percentUpgrade": 1.7
+      },
+      {
+        "stat": "HAPPINESS",
+        "staticUpgrade": 0,
+        "percentUpgrade": 1.7
+      }
+    ],
+    "price": 1000000,
+    "era": "NUMERIC",
+    "isPurchased": false,
+    "type": "UNIQUE"
+  },
+  {
+    "name": "Distributeur de Pizzas",
+    "bonuses": [
+      {
+        "stat": "FOOD",
+        "staticUpgrade": 500,
+        "percentUpgrade": 0
+      },
+      {
+        "stat": "HAPPINESS",
+        "staticUpgrade": 200,
+        "percentUpgrade": 0
+      }
+    ],
+    "price": 1000000,
+    "era": "NUMERIC",
+    "isPurchased": false,
+    "type": "COMMUN"
+  },
+  {
+    "name": "QG d'UberEats",
+    "bonuses": [
+      {
+        "stat": "FOOD",
+        "staticUpgrade": 1000,
+        "percentUpgrade": 0
+      },
+      {
+        "stat": "HAPPINESS",
+        "staticUpgrade": 300,
+        "percentUpgrade": 0
+      }
+    ],
+    "price": 2000000,
+    "era": "NUMERIC",
+    "isPurchased": false,
+    "type": "COMMUN"
+  },
+  {
+    "name": "Laboratoire Médical",
+    "bonuses": [
+      {
+        "stat": "PRODUCTION",
+        "staticUpgrade": 500,
+        "percentUpgrade": 0
+      },
+      {
+        "stat": "HAPPINESS",
+        "staticUpgrade": 200,
+        "percentUpgrade": 0
+      }
+    ],
+    "price": 1000000,
+    "era": "NUMERIC",
+    "isPurchased": false,
+    "type": "COMMUN"
+  },
+  {
+    "name": "Gratte-Ciel",
+    "bonuses": [
+      {
+        "stat": "PRODUCTION",
+        "staticUpgrade": 2000,
+        "percentUpgrade": 0
+      }
+    ],
+    "price": 2000000,
+    "era": "NUMERIC",
+    "isPurchased": false,
+    "type": "COMMUN"
+  },
+  {
+    "name": "Centrale Nucléaire",
+    "bonuses": [
+      {
+        "stat": "PRODUCTION",
+        "staticUpgrade": 5000,
+        "percentUpgrade": 0
+      }
+    ],
+    "price": 5000000,
+    "era": "NUMERIC",
+    "isPurchased": false,
+    "type": "COMMUN"
+  },
+  {
+    "name": "Cinéma",
+    "bonuses": [
+      {
+        "stat": "HAPPINESS",
+        "staticUpgrade": 2000,
+        "percentUpgrade": 0
+      }
+    ],
+    "price": 2000000,
+    "era": "NUMERIC",
+    "isPurchased": false,
+    "type": "COMMUN"
+  },
+  {
+    "name": "Stade",
+    "bonuses": [
+      {
+        "stat": "HAPPINESS&",
+        "staticUpgrade": 5000,
+        "percentUpgrade": 0
+      }
+    ],
+    "price": 5000000,
+    "era": "NUMERIC",
+    "isPurchased": false,
+    "type": "COMMUN"
+  }
+]

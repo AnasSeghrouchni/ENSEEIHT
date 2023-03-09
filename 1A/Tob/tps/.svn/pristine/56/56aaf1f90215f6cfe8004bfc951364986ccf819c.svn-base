@@ -1,0 +1,83 @@
+package allumettes;
+
+/**
+ * Lance une partie des 13 allumettes en fonction des arguments fournis sur la
+ * ligne de commande.
+ * @author Xavier Crégut
+ * @version $Revision: 1.5 $
+ */
+public class Jouer {
+	public static Strategie stringtoStrategie(String s, String nom) 
+			throws ConfigurationException {
+		if (s.equals("naif")) {
+			return new StratNaive();
+		} else if (s.equals("humain")) {
+			return new StratHumaine(nom);
+		} else if (s.equals("rapide")) {
+			return new StratRapide();
+		} else if (s.equals("expert")) {
+			return new StratExperte();
+		} else if (s.equals("tricheur")) {
+			return new StratTricheuse();
+		} else {
+			throw new ConfigurationException("Viellez à bien respecter les règles suivantes");
+		}
+	}
+
+	/**
+	 * Lancer une partie. En argument sont donnés les deux joueurs sous la forme
+	 * nom@stratégie.
+	 * @param args la description des deux joueurs
+	 */
+	public static void main(String[] args) {
+		try {
+			verifierNombreArguments(args);
+			boolean confiant = (args[0].equals("-confiant"));
+			int debut = 0; // indique le debut de la description des joueurs
+			if (confiant) {
+				debut += 1;
+			}
+			if (args[debut].split("@").length != 2 
+					|| args[debut + 1].split("@").length != 2) {
+				throw new ConfigurationException("Verifiez les entrées.");
+			} else {
+				String[] p1 = args[debut].split("@");
+
+				Joueur j1 = new Joueur(p1[0], stringtoStrategie(p1[1], p1[0]));
+
+				String[] p2 = args[debut + 1].split("@");
+				Joueur j2 = new Joueur(p2[0], stringtoStrategie(p2[1], p2[0]));
+
+				Arbitre arbitre = new Arbitre(j1, j2, confiant);
+				Jeu jeu = new JeuReel(13);
+
+				arbitre.arbitrer(jeu);
+			}
+
+		} catch (ConfigurationException e) {
+			System.out.println();
+			System.out.println("Erreur : " + e.getMessage());
+			afficherUsage();
+			System.exit(1);
+		}
+	}
+
+	private static void verifierNombreArguments(String[] args) {
+		final int nbJoueurs = 2;
+		if (args.length < nbJoueurs) {
+			throw new ConfigurationException("Trop peu d'arguments : " + args.length);
+		}
+		if (args.length > nbJoueurs + 1 && !(args[0].equals("-confiant"))) {
+			throw new ConfigurationException("Trop d'arguments : " + args.length);
+		}
+	}
+
+	/** Afficher des indications sur la manière d'exécuter cette classe. */
+	public static void afficherUsage() {
+		System.out.println("\n" + "Usage :" + "\n\t" + "java allumettes.Jouer joueur1 joueur2" + "\n\t\t"
+				+ "joueur est de la forme nom@stratégie" + "\n\t\t"
+				+ "strategie = naif | rapide | expert | humain | tricheur" + "\n" + "\n\t" + "Exemple :" + "\n\t"
+				+ "	java allumettes.Jouer Xavier@humain " + "Ordinateur@naif" + "\n");
+	}
+
+}

@@ -1,0 +1,18 @@
+package allumettes;
+
+public class StratTricheuse implements Strategie {
+
+	public int getPrise(Jeu jeu) {
+		System.out.println("[Je triche...]");
+		try {
+			while (jeu.getNombreAllumettes() != 2) {
+				jeu.retirer(1);
+			}
+		} catch (CoupInvalideException e) {
+			System.out.println("Cette exception n'est pas censée se produire.");
+		}
+		System.out.println("[" + jeu.toString() + "]");
+		return 1;
+	}
+
+}

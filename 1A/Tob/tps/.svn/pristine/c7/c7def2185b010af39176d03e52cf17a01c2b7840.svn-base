@@ -1,0 +1,20 @@
+package allumettes;
+import java.util.Random;
+
+public class StratNaive implements Strategie {
+
+	private Random alatoire;
+
+	public StratNaive() {
+		this.alatoire=new Random();
+	}
+
+	public int getPrise(Jeu jeu) {
+		assert(jeu!=null);
+		//La methode nextInt renvoie un nombre aléatoire entre 0 et le nombre en parametre-1 d'où le "+1"
+		int prise = this.alatoire.nextInt(Math.min(Jeu.PRISE_MAX,jeu.getNombreAllumettes()))+1;
+		return prise;
+
+	}
+
+}

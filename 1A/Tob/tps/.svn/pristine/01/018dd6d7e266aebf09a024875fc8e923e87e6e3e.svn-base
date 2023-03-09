@@ -1,0 +1,43 @@
+package allumettes;
+import org.junit.*;
+import static org.junit.Assert.*;
+
+public class StratTest {
+	
+	private Strategie stratN;
+	private Strategie stratR;
+	private Strategie stratE;
+	
+	@Before public void setUp() {
+		this.stratN= new StratNaive();
+		this.stratR= new StratRapide();
+		this.stratE= new StratExperte();
+	}
+	
+	@Test public void testGetPrise()
+	    {
+			//On ne peux pas vraiment tester StratNaive à cause du random.
+	        assertEquals(this.stratN.getPrise(new JeuReel(1)), 1);    
+	        
+	        //Test de StratRapide
+	        assertEquals(this.stratR.getPrise(new JeuReel(13)), 3);
+	        assertEquals(this.stratR.getPrise(new JeuReel(5)), 3 );
+	        assertEquals(this.stratR.getPrise(new JeuReel(2)), 2);
+	        assertEquals(this.stratR.getPrise(new JeuReel(1)), 1);
+	        
+	        //Test StratExperte
+	        assertEquals(this.stratE.getPrise(new JeuReel(13)),1);
+	        assertEquals(this.stratE.getPrise(new JeuReel(11)), 2 );
+	        assertEquals(this.stratE.getPrise(new JeuReel(8)),3);
+	        assertEquals(this.stratE.getPrise(new JeuReel(1)), 1);
+	        assertEquals(this.stratE.getPrise(new JeuReel(5)), 1);
+	        assertEquals(this.stratE.getPrise(new JeuReel(3)), 2 );
+	        assertEquals(this.stratE.getPrise(new JeuReel(2)), 1);
+	        assertEquals(this.stratE.getPrise(new JeuReel(1)), 1);
+	           
+	        
+	              
+	    }
+	}
+
+
