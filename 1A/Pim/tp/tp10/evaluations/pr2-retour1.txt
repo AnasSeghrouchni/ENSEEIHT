@@ -1,0 +1,6 @@
+
+* Voir le retour général
+* Voir le retour automatique
+
+* Attention à l'indentation
+Attention à la mémoire (lancer avec valgrind)

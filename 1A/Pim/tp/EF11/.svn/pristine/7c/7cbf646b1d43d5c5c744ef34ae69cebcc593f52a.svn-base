@@ -1,0 +1,36 @@
+-- Définition de structures de données associatives sous forme d'une chaine
+
+package Chaine is
+
+    type T_Chaine is limited private;
+
+    -- Initialiser une Sda.  La Sda est vide.
+    procedure Initialiser(Sda: out T_Chaine) with
+        Post => Est_Vide (Sda);
+
+
+    -- Est-ce qu'une Sda est vide ?
+    function Est_Vide (Sda : T_Chaine) return Boolean;
+
+    -- Savoir si une Clé est présente dans une Sda.
+    function Est_Present (Sda : in T_Chaine ; Octet : in T_Donnee) return Boolean;
+
+   --Ajouter un arbre associé à un caractere dans la chaine s'il n'y est pas, incrémenter sa fréquence correspondante s'il y est
+    procedure Enregistrer (Sda : in out T_Chaine ; Donnee : in T_Donnee) with;
+
+    -- Supprimer tous les éléments d'une Sda.
+    procedure Vider (Sda : in out T_Chaine) with
+        Post => Est_Vide (Sda);
+
+private
+
+   type T_Cellule;
+
+   type T_Chaine is access T_Cellule;
+
+   type T_Cellule is record
+      Arbre : T_Arbre;
+      Suivante : T_Chaine;
+   end record;
+
+end Chaine;

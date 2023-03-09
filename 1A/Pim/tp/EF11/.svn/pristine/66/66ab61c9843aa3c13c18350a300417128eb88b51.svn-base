@@ -1,0 +1,147 @@
+with Ada.Unchecked_Deallocation;
+
+
+package body Table is
+
+	procedure Free is
+		new Ada.Unchecked_Deallocation (Object => T_Cellule, Name => T_Table);
+
+	procedure Initialiser(Sda: out T_Table) is
+	begin
+        Sda:=Null;
+	end Initialiser;
+
+	function Est_Vide (Sda : T_Table) return Boolean is
+	begin
+		return Sda=Null;
+	end;
+
+
+	function Taille (Sda : in T_Table) return Integer is
+	begin
+        if Sda=Null then
+            return 0;
+        else
+            return 1+Taille(Sda.all.Prochain);
+        end if;
+
+	end Taille;
+
+    procedure Enregistrer (Sda : in out T_Table ; Cle : in T_Cle ; Donnee : in T_Donnee) is
+        begin
+            if Sda=Null then
+            Initialiser(Sda);
+            Sda:=New T_Cellule;
+                Sda.all.Cle:=Cle;
+                Sda.all.Donnee:=Donnee;
+                Sda.all.Prochain:=Null;
+            elsif Sda.all.Cle=Cle then
+                Sda.all.Donnee:=Donnee;
+            else
+                Enregistrer(Sda.all.Prochain,Cle,Donnee);
+            end if;
+	end Enregistrer;
+
+
+	function Cle_Presente (Sda : in T_Table ; Cle : in T_Cle) return Boolean is
+	begin
+            if Sda=Null then
+                return False;
+            elsif Sda.all.Cle=Cle then
+                return True;
+            else
+                return Cle_Presente(Sda.all.Prochain,Cle);
+            end if;
+	end;
+
+
+    function La_Donnee (Sda : in T_Table ; Cle : in T_Cle) return T_Donnee is
+        Cle_Absente_Exception: Exception;
+        begin
+            if Sda=Null then
+                raise Cle_Absente_Exception;
+            elsif Sda.all.Cle=Cle then
+                return Sda.all.Donnee;
+            else
+                return La_Donnee(Sda.all.Prochain,Cle);
+        end if;
+    exception
+            when Cle_Absente_Exception=>Null;
+	end La_Donnee;
+
+    procedure Supprimer (Sda : in out T_Table ; Cle : in T_Cle) is
+        Cle_Absente_Exception: Exception;
+	begin
+        if Sda=Null then
+
+            raise Cle_Absente_Exception;
+        elsif Sda.all.Cle=Cle then
+            Sda:=Sda.all.Prochain;
+        else
+            Supprimer(Sda.all.Prochain,Cle);
+        end if;
+        exception
+            when Cle_Absente_Exception=>Null;
+	end Supprimer;
+
+	procedure Vider (Sda : in out T_Table) is
+	begin
+		if Sda /= Null then
+			Vider (Sda.all.Prochain);
+			Free (Sda);
+		else
+            Null;
+        end if;
+
+
+    end Vider;
+
+    procedure Pour_Chaque (Sda : in T_Table) is
+    begin
+
+        if Sda=Null then
+           Null;
+        else
+            Traiter(Sda.all.Cle,Sda.all.Donnee);
+            Pour_Chaque(Sda.all.Prochain);
+
+
+            end if;
+        exception
+            when others =>Pour_Chaque(Sda.all.Prochain);
+    end Pour_Chaque;
+
+     procedure Construction_table(Arbre:in T_Arbre; Sda:in out T_Table; Chaine:in Unbounded_String) is
+   begin
+        if Est_feuille(arbre) then
+            Enregistrer(Sda, Arbre.all.Cle, Chaine);
+        else
+            Construction_table(Arbre.all.Gauche,Sda,Chaine & "0");
+            Construction_table(Arbre.all.Droite,Sda,Chaine & "1");
+        end if;
+    end Construction_table;
+
+
+      procedure Affiche_Couple(Octet : in T_Octet; Str : in Unbounded_String) is
+    begin
+      Put("'");
+      if Image(Octet)=10 then
+         Put("'\n'");
+      elsif Octet=-1 then
+         Put("'\$'");
+      elsif Octet=32 then
+         Put("' '");
+      else
+         Put(To_string(Character'Val(Octet)));
+      end if;
+        Put("'");
+        Put("-->");
+        Put(To_String(Str));
+        New_Line;
+    end Affiche_Couple;
+    procedure Afficher_Table is
+        new Pour_Chaque(Affiche_Couple);
+
+
+
+end Table;

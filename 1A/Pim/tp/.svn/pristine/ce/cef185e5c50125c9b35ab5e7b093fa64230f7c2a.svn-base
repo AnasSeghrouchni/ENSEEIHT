@@ -1,0 +1,19 @@
+with Ada.Text_IO; use Ada.Text_IO;
+with LCA;
+
+
+
+procedure Inserer is
+
+    package LCA_string is
+        new  LCA(T_Cle=>string, T_Donnee=>Integer);
+    use LCA_string;
+    procedure LCA_string.Afficher_lca is new Pour_Chaque (Traiter => Put);
+
+    l:LCA_string.T_LCA;
+begin
+    LCA_string.Initialiser(L);
+    LCA_string.Enregistrer (l,"un",1);
+    LCA_string.Enregistrer(l,"deux",2);
+    LCA_string.Afficher_lca(l);
+end Inserer;

@@ -1,0 +1,304 @@
+with Ada.Unchecked_Deallocation;
+with Piles;
+with Ada.Strings.Unbounded;     use Ada.Strings.Unbounded;
+with Ada.Integer_Text_IO;   use Ada.Integer_Text_IO;
+with  Ada.Text_IO.Unbounded_IO; use  Ada.Text_IO.Unbounded_IO;
+with Ada.Text_IO;           use Ada.Text_IO;
+with Table; use Table;
+with Chaine;
+
+package body Arbre is
+
+    package Piles_Arbre is
+        new Piles(T_Element=>T_Arbre);
+    use Piles_Arbre;
+
+    procedure Free_Arbre is
+            new Ada.Unchecked_Deallocation (Object => T_Noeud, Name => T_Arbre);
+
+    function Est_Feuille (Arbre: in T_Arbre) return Boolean is
+        begin
+        return Arbre.Droite=Null and Arbre.Gauche=Null;
+    end Est_Feuille;
+
+    function Code(Arbre:in T_Arbre) return Unbounded_String is
+        Temporaire : T_Arbre;
+        Code_Arbre:Unbounded_String;
+        P:T_Pile;
+    begin
+        Code_Arbre:=To_Unbounded_String("");
+        Initialiser(P);
+        Empiler(P,Arbre);
+        while not Est_Vide(P) loop
+            Temporaire:=Sommet(P);
+            Depiler(P);
+            if Est_Feuille(Temporaire) and (not Est_Vide(P)) then
+                Code_Arbre:=Code_Arbre & To_Unbounded_String("1");
+            elsif Est_Feuille(Temporaire) and ( Est_Vide(P)) then
+                null;
+            else
+                Empiler(P,Temporaire.all.Droite);
+                Empiler(P,Temporaire.all.Gauche);
+                Code_Arbre:=Code_Arbre & To_Unbounded_String("0");
+
+            end if;
+        end loop;
+        return Code_Arbre;
+    end Code;
+
+    function Est_Vide_Arbre ( Arbre : in T_Arbre) return Boolean is
+    begin
+        return Arbre=Null;
+    end Est_Vide_Arbre;
+
+
+    procedure Vider_arbre(Arbre : in out T_Arbre) is
+    begin
+        if Est_Feuille(Arbre) then
+            Free_Arbre(Arbre);
+        else
+            Vider_arbre(Arbre.Gauche);
+            Vider_arbre(Arbre.Droite);
+            Free_Arbre(Arbre);
+        end if;
+    end Vider_arbre;
+
+
+    procedure Free_Sda is
+            new Ada.Unchecked_Deallocation (Object => T_Cellule, Name => T_Chaine);
+
+    procedure Vider (Sda : in out T_Chaine) is
+    begin
+        if Sda /= Null then
+            Vider (Sda.all.Suivante);
+            Free_Sda (Sda);
+        end if;
+
+
+    end Vider;
+
+
+
+    Procedure Initialiser(Sda: out T_Chaine) is
+    begin
+        Sda:=Null;
+    end;
+
+
+    function Est_Vide(Sda : in T_Chaine) return Boolean is
+    begin
+        return Sda=Null;
+    end;
+
+    procedure Enregistrer(Sda : in out T_Chaine; Octet : in T_Octet) is
+    begin
+        if Sda=Null then
+            Sda:= New T_Cellule;
+            Sda.all.Arbre:=new T_Noeud;
+            Sda.all.Arbre.all.Donnee:=1;
+            Sda.all.Arbre.all.Cle:=Octet;
+            Sda.all.Arbre.all.Gauche:=Null;
+            sda.all.Arbre.all.Droite:=Null;
+            Sda.all.Suivante:=Null;
+        elsif Sda.all.Arbre.all.Cle = Octet then
+            Sda.all.Arbre.all.Donnee:=Sda.all.Arbre.all.Donnee+1;
+        else
+            Enregistrer(Sda.all.Suivante,Octet);
+        end if;
+
+    end enregistrer;
+
+    --jai pas compris in out pour file
+
+
+    procedure Frequence(Sda : in out T_Chaine; File_Name : in String ;File : in out Ada.Streams.Stream_IO.File_Type) is
+        S : Stream_Access;
+        Octet : T_Octet;
+        Ch:T_Chaine;
+    begin
+        Initialiser(Sda);
+        Open(File,In_File,File_Name);
+        S:=Stream(File);
+        while not End_Of_File(File) loop
+            Octet:=T_Octet'Input(S);
+            Enregistrer(Sda,Octet);
+            New_Line;
+        end loop;
+        Close(File);
+        Ch:=new T_Cellule;
+        Ch.all.Arbre:=new T_Noeud;
+        Ch.all.Arbre.all.Gauche:=Null;
+        Ch.all.Arbre.all.Droite:=Null;
+        Ch.all.Arbre.all.Donnee:=0;
+        Ch.all.Arbre.all.Cle:=-1;
+        Ch.all.suivante:=Sda;
+        Sda:=Ch;
+    end Frequence;
+
+    procedure Vider_Sda(Sda : in out T_Chaine) is
+    begin
+        if Sda.all.Suivante=Null then
+            Free_Sda(Sda);
+        else
+            Vider_Sda(Sda.all.Suivante);
+            Free_Sda(Sda);
+        end if;
+    end Vider_Sda;
+
+
+    procedure Supprimer(Sda : in out T_Chaine; Frequence : in integer) is
+    begin
+        if Sda.all.Arbre.all.Donnee=Frequence then
+            Sda:=Sda.all.suivante;
+        else
+            Supprimer(Sda.all.suivante, Frequence);
+        end if;
+    end Supprimer;
+
+
+    procedure Min_arbre(Sda:in T_Chaine;Min :in out integer;Arbre_min: in out T_Arbre) is
+    begin
+        if Sda.all.Arbre.all.Donnee<Min then
+            Min:=Sda.all.Arbre.all.Donnee;
+            Arbre_min:=Sda.all.Arbre;
+        end if;
+        if Sda.all.Suivante/=Null then
+            Min_arbre(Sda.all.Suivante,Min,Arbre_min);
+        end if;
+    end Min_arbre;
+
+
+     function taille(s: in T_Chaine) return integer is
+        begin
+        if s=Null then
+        return 0;
+        else
+            return taille(s.all.Suivante)+1;
+        end if;
+    end taille;
+
+    --Calcul les deux min d'une chaine.
+    procedure Deux_min(Sda: in out T_Chaine; arbre_min1: out T_Arbre; arbre_min2:out T_Arbre) is
+        f:integer;
+    begin
+        arbre_min1:=Sda.all.Arbre;
+        f:=Sda.all.arbre.all.Donnee;
+        Min_arbre(Sda,f,arbre_min1);
+        Supprimer(Sda,f);
+        f:=Sda.all.arbre.all.Donnee;
+        arbre_min2:=Sda.all.Arbre;
+        Min_arbre(Sda,f,arbre_min2);
+        Supprimer(Sda,f);
+    end Deux_min;
+
+
+    procedure Construction_Arbre(Sda: in out T_Chaine; Arbre : out T_Arbre) is
+        Ch:T_Chaine;
+        Arbre_min1:T_arbre;
+        Arbre_min2:T_Arbre;
+    begin
+        if Sda=Null then
+            Put("La lca est vide");
+        elsif Sda.all.suivante=Null then
+            Arbre:=Sda.all.arbre;
+        else
+            Deux_Min(Sda,Arbre_min1,Arbre_min2);
+            Ch:=new T_Cellule;
+            Ch.all.Arbre:=new T_Noeud;
+            Ch.all.Arbre.all.Gauche:=Arbre_min1;
+            Ch.all.Arbre.all.Droite:=Arbre_min2;
+            Ch.all.Arbre.all.Donnee:=Arbre_min1.all.Donnee+Arbre_min2.all.Donnee;
+            Ch.all.suivante:=Sda;
+            Sda:=Ch;
+            Construction_Arbre(Sda,Arbre);
+        end if;
+    end Construction_Arbre;
+
+
+    function Est_Present(Sda : in T_Chaine; Octet : in T_Octet) return Boolean is
+    begin
+        if Sda=Null then
+            return False;
+        elsif Sda.all.Arbre.all.Cle=Octet then
+            return True;
+        else
+            return Est_Present(Sda.all.Suivante, Octet);
+            end if;
+    end Est_Present;
+
+
+    procedure Construction_Table(Arbre: in T_Arbre;Table:out T_Table) is
+        procedure Construire_table(Arbre: in T_Arbre;Table:out T_Table;Chaine:in Unbounded_String) is
+        begin
+            if Est_Feuille(Arbre) then
+                Enregistrer(Table, Arbre.all.Cle, Chaine);
+            else
+                Construire_table(arbre.all.gauche,Table,Chaine & "0");
+                Construire_table(arbre.all.droite,Table,Chaine & "1");
+            end if;
+        end construire_table;
+    begin
+        Construire_table(Arbre,Table,To_Unbounded_String("")) ;
+    end Construction_Table;
+
+    package Chaine_i is
+            new Chaine(Integer);
+    use Chaine_i;
+    Procedure Affiche(Arbre: in T_Arbre; Alinea: in Integer; C : in out Chaine_i.T_Chaine )is
+
+    begin
+        Put("(");
+        Put(Arbre.all.Donnee,1);
+        Put(")");
+        if Est_Feuille(Arbre) then
+            Affiche_Caractere(Arbre.all.Cle);
+        else
+            new_Line;
+            for i in 1..Alinea loop
+                if Est_Present(C,i) then
+                    put(" ");
+                else
+                    put("|");
+                end if;
+                put(7*" ");
+            end loop;
+
+
+            Put("\--0--");
+
+            Supprimer(C,Alinea+1);
+            Affiche(Arbre.all.Gauche,Alinea+1,C);
+
+            New_Line;
+            for i in 1..Alinea loop
+                if Est_Present(C,i) then
+                    put(" ");
+                else
+                    put("|");
+                end if;
+                put(7*" ");
+            end loop;
+
+
+            Put("\--1--");
+
+            Enregistrer(C,Alinea+1);
+            Affiche(Arbre.all.Droite,Alinea+1,C);
+
+        end if;
+    end Affiche;
+    procedure Afficher_Arbre(Arbre:in T_Arbre) is
+
+        C:Chaine_i.T_Chaine;
+
+    begin
+        Initialiser(C);
+        Affiche(Arbre,0,C);
+    end Afficher_Arbre;
+
+
+
+
+end Arbre;
+
+

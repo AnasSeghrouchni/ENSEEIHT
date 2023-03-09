@@ -1,0 +1,53 @@
+with Arbre; use Arbre;
+with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
+with Ada.Streams.Stream_IO; use Ada.Streams.Stream_IO;
+with Ada.Text_IO; use Ada.Text_IO;
+with Table;use Table;
+
+package body Compression is
+
+   procedure Ecrit_Caracteres(S:in Stream_Access; Table : in T_Table) is
+   begin
+
+      if Est_Vide(Table) then
+         Null;
+      else
+         T_Octet'Write(S, La_Cle(Table));
+         Ecrit_Caracteres(S, Le_Prochain(Table));
+      end if;
+   end Ecrit_Caracteres;
+
+
+
+   procedure Compresse(Nom_Fichier: in String) is
+      File1, File2: Ada.Streams.Stream_IO.File_Type;
+      S:T_Chaine;
+      Arbre: T_Arbre;
+      Sda: T_Table;
+      S1,S2: Stream_Access;
+   begin
+      Frequence(S,Nom_Fichier,File1);
+      Construction_Arbre(S,Arbre);
+
+      Initialiser(Sda);
+      Construction_Table(Arbre,Sda);
+
+      Create(File2, Out_File, To_String(To_Unbounded_String("Compressed_") & Nom_Fichier));
+      S2:=Stream(File2);
+
+      Ecrit_Caracteres(S2, Sda);				-- 1) Caracteres en Octet selon parcours infixe
+
+      String'Write(S2,To_String(Code(Arbre)));		-- 2) Code de l'arbre
+
+      Open(File1, In_File, Nom_Fichier);
+      S1:=Stream(File1);
+      while not End_Of_File(File1) loop			-- 3) Fichier avec Octets transformés selon la table
+         String'Write(S2,To_String(La_Donnee(Sda, T_Octet'Input(S1))));
+         New_Line;
+      end loop;
+
+      Close(File1);
+      Close(File2);
+
+   end Compresse;
+end Compression;

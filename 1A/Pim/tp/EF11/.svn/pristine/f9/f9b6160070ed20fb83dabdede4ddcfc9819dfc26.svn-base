@@ -1,0 +1,65 @@
+with SDA_Exceptions;         use SDA_Exceptions;
+with Ada.Unchecked_Deallocation;
+
+package body Arbre is
+
+    procedure Free_Arbre is
+		new Ada.Unchecked_Deallocation (Object => T_Arbre, Name => T_Voisin);
+
+    function Est_Feuille (Arbre: in T_Arbre) return Boolean is
+        begin
+        return Arbre.Droite=Null and Arbre.Gauche=Null;
+        end Est_Feuille;
+
+
+    function Code(Arbre:in T_Arbre) return Unbounded_String is
+        Temporaire : T_Arbre;
+        Code_Arbre:Unbounded_String;
+    begin
+        Code_Abre:="";
+        Initialiser(P);
+        Empiler(P,Arbre);
+        while not Est_Vide(P) loop
+            Temporaire:=Sommet(P);
+            Depiler(P);
+            if Est_Feuille(Temporaire) then
+                    Code_Arbre:='1'+Code_Arbre;
+            else
+                Empiler(Arbre.Droite);
+                Empiler(Arbre.Gauche);
+                Code_Arbre:='0'+Code_Arbre;
+            end if;
+        end loop;
+        return Code_Arbre;
+    end Code;
+
+    procedure Vider_arbre(Arbre : in out T_Arbre) is
+    begin
+        if Est_Feuille(Arbre) then
+            Free_Arbre(Arbre);
+        else
+            Vider_arbre(Arbre.Gauche);
+            Vider_arbre(Arbre.Droite);
+            Free_Arbre(Arbre);
+        end if;
+    end Vider_arbre;
+
+
+    procedure Texte_Arbre (Arbre: in T_Arbre) is
+        Temporaire : T_Arbre;
+        procedure Afficher_Gauche(Arbre : in,Compteur: in) is
+        begin
+            if Est_Feuille(Arbre) then
+                New_Line;
+                for i in 0..(Compteur-1) loop
+
+    begin
+        Initialiser(P);
+        Empiler(P,Arbre);
+        while not Est_Vide(P) loop
+            Temporaire:=Sommet(P);
+            Depiler(P);
+            if Est_Feuille(Temporaire) then
+                Afficher(Temporaire.Donnee);
+            else
+                Put(

@@ -1,0 +1,43 @@
+-- Définition de structures de données associatives sous forme d'une chaine permettant de creer l'arbre.
+with Arbre;
+
+package Chaine is
+
+    type T_Octet is mod 2 ** 8;
+    for T_Octet'Size use 8;
+    type T_Chaine is limited private;
+
+    package Arbre_f is
+            new Arbre(T_Cle => T_Octet,T_Donnee => Integer );
+    use Arbre_f;
+
+    -- Initialiser une Sda.  La Sda est vide.
+    procedure Initialiser(Sda: out T_Chaine) with
+        Post => Est_Vide (Sda);
+
+    -- Est-ce qu'une Sda est vide ?
+    function Est_Vide (Sda : T_Chaine) return Boolean;
+
+    -- Savoir si une Clé est présente dans une Sda.
+    function Est_Present (Sda : in T_Chaine ; Octet : in T_Octet) return Boolean;
+
+   --Ajouter un arbre associé à un caractere dans la chaine s'il n'y est pas, incrémenter sa fréquence correspondante s'il y est
+    procedure Enregistrer (Sda : in out T_Chaine ; Octet : in T_Octet) ;
+
+    -- Supprimer tous les éléments d'une Sda.
+    procedure Vider (Sda : in out T_Chaine) with
+            Post => Est_Vide (Sda);
+    --Supprimer la case contenant ATTENTION
+    procedure Supprimer( Sda : in out T_Chaine;Frequence : in integer) ;
+private
+
+   type T_Cellule;
+
+   type T_Chaine is access T_Cellule;
+
+   type T_Cellule is record
+      Arbre : T_Arbre;
+      Suivante : T_Chaine;
+   end record;
+
+end Chaine;

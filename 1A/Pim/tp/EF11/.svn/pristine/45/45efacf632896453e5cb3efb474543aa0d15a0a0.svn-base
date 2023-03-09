@@ -1,0 +1,6 @@
+-- Définition d'une exception commune à toutes les SDA.
+package H_Exceptions is
+
+	Table_vide  : Exception;	-- une clé est absente d'un SDA
+
+end H_Exceptions;

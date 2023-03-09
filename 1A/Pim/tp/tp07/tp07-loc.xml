@@ -1,0 +1,901 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project>
+    <vfs_file>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_file>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/afficher_un_entier.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/exemple_integer_io.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/afficher_un_entier.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/afficher_un_entier.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/exemple_integer_io.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/integer_io.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 26" line=" 13" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/integer_io.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/piles.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/integer_io.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 10" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/integer_io.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/integer_io.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/piles.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/test_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/piles.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/utiliser_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/piles.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/piles.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/test_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/piles.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/utiliser_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/test_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/piles.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/integer_io.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/afficher_un_entier.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/afficher_un_entier.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/afficher_un_entier.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/exemple_integer_io.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp07/integer_io.adb</vfs_file>
+    </file_marker>
+  </Project>
+  <Project >
+    <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_file>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/afficher_un_entier.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/afficher_un_entier.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/exemple_integer_io.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/integer_io.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/utiliser_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/test_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/test_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/test_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/utiliser_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 167">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/utiliser_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/test_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/utiliser_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/test_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/test_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/utiliser_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/utiliser_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/test_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/utiliser_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/utiliser_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/test_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/utiliser_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 219">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/utiliser_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/integer_io.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 18" line=" 21">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 18" line=" 15">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/integer_io.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/integer_io.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/exemple_integer_io.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/afficher_un_entier.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/afficher_un_entier.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/afficher_un_entier.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/integer_io.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/integer_io.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/integer_io.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 16" line=" 16">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 18" line=" 15">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 17" line=" 21">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 18" line=" 15">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 16" line=" 16">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 18" line=" 15">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 16" line=" 16">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/utiliser_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/test_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/utiliser_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 22">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 16">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 24" line=" 16">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 24" line=" 15">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 8">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 30" line=" 15">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 43">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 18" line=" 14">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 43">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 18" line=" 14">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 16" line=" 25">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 31" line=" 23">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 31" line=" 23">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 31" line=" 23">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 31" line=" 23">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 32" line=" 23">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 29" line=" 15">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 10" line=" 13">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 24" line=" 15">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/test_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/utiliser_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 29" line=" 15">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 32" line=" 23">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 33" line=" 23">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 17">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 17">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 95">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 26" line=" 74">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 46" line=" 75">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 95">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 58">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 78">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 76">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 95">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 46" line=" 75">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 34" line=" 73">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 46" line=" 75">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 18" line=" 81">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 78">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 23" line=" 72">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 3" line=" 45">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/utiliser_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 68" line=" 76">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/piles.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/test_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 33" line=" 110">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 67">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/utiliser_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 66">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 67">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 52" line=" 60">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 67">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 52" line=" 60">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 67">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 68" line=" 63">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 67">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 28" line=" 65">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 67">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 68">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 67">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 68">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 67">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/utiliser_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/test_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 41" line=" 68">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 66">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 76">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 40" line=" 77">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 93">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 48" line=" 82">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 93">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 28" line=" 89">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 8" line=" 94">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 93">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 60" line=" 82">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

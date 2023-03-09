@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project>
+    <vfs_file>/home/aseghrou/1A/pim/tp/tp08/tp08.gpr</vfs_file>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp08/tp08.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp08/exemples_memoire_dynamique.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/tp08/tp08.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/tp08/piles.adb</vfs_file>
+    </file_marker>
+  </Project>
+  <Project >
+    <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp08/tp08.gpr</vfs_file>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp08/tp08.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp08/piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 39">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp08/tp08.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp08/piles.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 10" line=" 48">
+      <vfs_project >/home/aseghrou/Annee_1/pim/tp/tp08/tp08.gpr</vfs_project>
+      <vfs_file >/home/aseghrou/Annee_1/pim/tp/tp08/piles.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

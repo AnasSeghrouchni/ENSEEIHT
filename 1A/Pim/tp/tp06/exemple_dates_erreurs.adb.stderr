@@ -1,0 +1,5 @@
+exemple_dates_erreurs.adb:12:31: error: "OCTOBRE" is not visible
+exemple_dates_erreurs.adb:12:31: error: non-visible (private) declaration at dates.ads:58
+exemple_dates_erreurs.adb:23:21: error: prefix of "Succ" attribute must be scalar type
+exemple_dates_erreurs.adb:25:10: error: nonscalar 'Image is an Ada 2022 feature
+exemple_dates_erreurs.adb:25:10: error: unit must be compiled with -gnat2022 switch

@@ -1,0 +1,83 @@
+-- Définition de structures de donnÃ©es associatives sous forme d'une liste
+-- chaÃ®nÃ©e associative (LCA).
+with Arbre;use Arbre;
+with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
+with Ada.Unchecked_Deallocation;
+with Ada.Streams.Stream_IO; use Ada.Streams.Stream_IO;
+with Ada.Text_IO; use Ada.Text_IO;
+
+--generic
+	--type T_Octet is private;
+	--type Unbounded_String is private;
+
+package Table is
+
+	type T_Table is limited private;
+
+	-- Initialiser une Sda.  La Sda est vide.
+	procedure Initialiser(Sda: out T_Table) with
+		Post => Est_Vide (Sda);
+
+
+	-- Est-ce qu'une Sda est vide ?
+	function Est_Vide (Sda : T_Table) return Boolean;
+
+
+	-- Obtenir le nombre d'Ã©lÃ©ments d'une Sda.
+	function Taille (Sda : in T_Table) return Integer with
+		Post => Taille'Result >= 0
+			and (Taille'Result = 0) = Est_Vide (Sda);
+
+
+	-- Enregistrer une DonnÃ©e associÃ©e Ã  une ClÃ© dans une Sda.
+	-- Si la clÃ© est dÃ©jÃ  prÃ©sente dans la Sda, sa donnÃ©e est changÃ©e.
+	procedure Enregistrer (Sda : in out T_Table ; Cle : in T_Octet ; Donnee : in Unbounded_String) with
+		Post => Cle_Presente (Sda, Cle) and (La_Donnee (Sda, Cle) = Donnee)   -- donnÃ©e insÃ©rÃ©e
+				and (not (Cle_Presente (Sda, Cle)'Old) or Taille (Sda) = Taille (Sda)'Old)
+				and (Cle_Presente (Sda, Cle)'Old or Taille (Sda) = Taille (Sda)'Old + 1);
+
+	-- Supprimer la DonnÃ©e associÃ©e Ã  une ClÃ© dans une Sda.
+	-- Exception : Cle_Absente_Exception si ClÃ© n'est pas utilisÃ©e dans la Sda
+	procedure Supprimer (Sda : in out T_Table ; Cle : in T_Octet) with
+		Post =>  Taille (Sda) = Taille (Sda)'Old - 1 -- un Ã©lÃ©ment de moins
+			and not Cle_Presente (Sda, Cle);         -- la clÃ© a Ã©tÃ© supprimÃ©e
+
+
+	-- Savoir si une ClÃ© est prÃ©sente dans une Sda.
+	function Cle_Presente (Sda : in T_Table ; Cle : in T_Octet) return Boolean;
+
+
+	-- Obtenir la donnÃ©e associÃ©e Ã  une Cle dans la Sda.
+	-- Exception : Cle_Absente_Exception si ClÃ© n'est pas utilisÃ©e dans l'Sda
+	function La_Donnee (Sda : in T_Table ; Cle : in T_Octet) return Unbounded_String;
+
+
+	-- Supprimer tous les Ã©lÃ©ments d'une Sda.
+	procedure Vider (Sda : in out T_Table) with
+            Post => Est_Vide (Sda);
+
+    procedure Construction_table(Arbre:in T_Arbre; Sda:in out T_Table; Chaine: in Unbounded_String);
+
+
+    procedure Afficher_Table(Sda: in T_Table);
+
+	-- Appliquer un traitement (Traiter) pour chaque couple d'une Sda.
+	generic
+		with procedure Traiter (Cle : in T_Octet; Donnee: in Unbounded_String);
+    procedure Pour_Chaque (Sda : in T_Table);
+
+
+
+private
+
+   type T_Cellule;
+
+   type T_Table is access T_Cellule;
+
+   type T_Cellule is record
+      Cle : T_Octet;
+      Donnee : Unbounded_String;
+      Prochain : T_Table;
+   end record;
+
+end Table;

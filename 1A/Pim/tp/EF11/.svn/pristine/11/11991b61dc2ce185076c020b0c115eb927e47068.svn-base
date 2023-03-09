@@ -1,0 +1,21 @@
+with Arbre; use Arbre;
+with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
+with Ada.Streams.Stream_IO; use Ada.Streams.Stream_IO;
+with Ada.Text_IO; use Ada.Text_IO;
+with Table;use Table;
+
+package Decompression is
+    type T_Tableau is private;
+
+    procedure Decompresser(Texte_Compresse: in Ada.Streams.Stream_IO.File_Type; Nom_Texte_Comp : in string;
+                           Texte_Decompresse: out Ada.Streams.Stream_IO.File_Type; Nom_Texte_DEcomp: in string);
+
+    procedure Reconstruction_Arbre(Arbre:out T_Arbre; Code : in Unbounded_String; Octet:in T_Tableau);
+
+
+
+private
+    type T_Tableau is array(1..260) of T_Octet;
+
+
+end Decompression;

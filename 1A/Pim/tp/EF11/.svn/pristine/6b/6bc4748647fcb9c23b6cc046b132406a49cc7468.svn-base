@@ -1,0 +1,51 @@
+
+generic
+   Capacite : integer;
+   type T_Donnee1 is private;
+
+
+package Arbre is
+
+    with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
+
+    with Piles;
+    package Piles_Arbre is
+		new Piles(T_Element=>T_Arbre);
+    use Piles_Arbre;
+
+
+    type T_Arbre is limited private;
+
+    --Savoir si un arbre n'a pas de fils gauche ni de fils droit (c'est une feuille).
+    function Est_Feuille(Arbre : in) return boolean with;
+
+    function Est_Vide_Arbre(Arbre : in) return Boolean;
+
+    --Construire le code de l'arbre à partir de l'arbre
+    function Code(Arbre:in T_Arbre) return Unbounded_String;
+
+    -- Construit l'abrbre de Huffman lié au code de Huffmann présent au début du texte compressé
+    function Construire_Arbre(Code: in T_LCA, Arbre : out T_Arbre);
+
+    	-- Supprimer tous les Ã©lÃ©ments d'une Sda.
+	procedure Vider_arbre (Arbre: in out T_Arbre) with
+		Post => Est_Vide_Arbre (Arbre);
+
+    generic
+		with procedure Afficher (Donnee: in T_Donnee);
+    procedure Texte_Arbre(Arbre : in T_Arbre);
+
+
+
+
+private
+
+   type T_Arbre;
+   type T_Voisin is access T_Arbre;
+   type T_Arbre is record
+      Donnee : T_Donnee;
+      Frequence : integer;
+      Droite : T_Voisin;
+      Gauche : T_Voisin;
+   end record;
+end Arbre;

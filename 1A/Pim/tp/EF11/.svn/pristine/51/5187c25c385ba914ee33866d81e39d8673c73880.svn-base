@@ -1,0 +1,13 @@
+with LCA;
+package Huffman is
+
+    Procedure Affiche_Couple(Octet : T_Octet, Str : Unbounded_String) is
+    Begin
+        Put("‘");
+        Put(transformer l'octet en caractere);
+        Put("-->");
+        Put(Unbouded to string str);
+        New_Line;
+    End Affiche_Couple;
+
+end Huffmann

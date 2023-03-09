@@ -1,0 +1,114 @@
+V "GNAT Lib v2021"
+A -gnatA
+A -gnatwa
+A -gnata
+A -g
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_DEALLOCATION
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U th%b			th.adb			8822a901 NE OO PK GE IU
+W ada%s			ada.ads			ada.ali
+W ada.unchecked_deallocation%s
+W sda_exceptions%s	sda_exceptions.ads	sda_exceptions.ali
+
+U th%s			th.ads			c2956ca8 BN EE NE OO PK GE
+W ada%s			ada.ads			ada.ali
+Z ada.unchecked_deallocation%s
+W lca%s			lca.adb			lca.ali
+Z sda_exceptions%s	sda_exceptions.ads	sda_exceptions.ali
+
+D ada.ads		20210520051130 76789da1 ada%s
+D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20210520051129 c3a8ac65 ada.unchecked_deallocation%s
+D lca.ads		20211116210356 fa9bf130 lca%s
+D lca.adb		20211117200428 31e83375 lca%b
+D sda_exceptions.ads	20211116092222 58fab764 sda_exceptions%s
+D system.ads		20210520051134 a2da961d system%s
+D s-exctab.ads		20210520051131 54135002 system.exception_table%s
+D s-stalib.ads		20210520051133 472fbca8 system.standard_library%s
+D th.ads		20211130202722 380e9d98 th%s
+D th.adb		20211130204043 2b7e2f98 th%b
+G a e
+G c Z s b [th standard 11 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 11|2r6
+X 3 a-uncdea.ads
+20u15*Unchecked_Deallocation 11|2w10
+X 4 lca.ads
+5+14 T_Cle 10|14r26
+6+14 T_Donnee 10|14r44
+8k9*LCA 79e8 10|3w6 14r21
+10P14 T_LCA 10|69r40[13]
+13U19 Initialiser 11|10s13[10|13]
+18V18 Est_Vide{boolean} 11|19s30[10|13] 22s16[10|13]
+22V18 Taille{integer} 11|29s45[10|13]
+29U19 Enregistrer 11|42s17[10|13]
+36U19 Supprimer 11|53s9[10|13]
+42V18 Cle_Presente{boolean} 11|59s34[10|13] 62s16[10|13]
+47V18 La_Donnee{10|6+10} 11|73s16[10|13]
+51U19 Vider 11|80s13[10|13]
+57U32 Traiter 11|88r59[10|13]
+58u19 Pour_Chaque 11|88r46[10|13]
+X 6 sda_exceptions.ads
+2K9*SDA_Exceptions 6e19 11|1w6 1r34
+X 10 th.ads
+5+10 T_Cle_t 8r31 14r34 36r61 43r59 49r57 54r54 63r51 11|34r56 45r54 56r50
+. 65r50
+6+10 T_Donnee_t 14r56 36r83 54r70 63r71 11|34r78 65r66
+7i5 Capacite{integer} 69r27 11|9r21 19r17 28r21 37r20 38r34 48r21 49r34 59r17
+. 68r21 69r34 79r21 92r21
+8V19 Fh{integer} 8>22 11|37s12 38s21 40s21 48s13 49s21 51s21 68s13 69s21
+. 71s21
+8*22 Cle{5+10}
+11k9*TH 5z10 6z10 7z5 8z19 69E10 70l5 70e7 11|4b14 97l5 97t7
+13K13*LCA_t[4|8] 15r9
+17A14*T_TH(4|10P14[13]) 20r40 25r34 29r35 36r45 43r43 49r41 54r38 58r39 64r37
+. 69c10 11|7r38 16r32 25r30 34r40 45r38 56r36 65r34 76r32 86r35
+20U19*Initialiser_t 20<33 11|7b15 14l9 14t22
+20a33 T{17A14} 21r37 11|7b30 10m25 10r25
+25V18*Est_Vide_t{boolean} 21s25 25>30 31s53 59s21 11|16b14 23l9 23t19
+25a30 T{17A14} 11|16b26 19r39 22r25
+29V18*Taille_t{integer} 29>28 30r25 31r30 39s69 39s84 44s26 44s41 11|25b14
+. 32l9 32t17
+29a28 T{17A14} 31r65 11|25b24 29r52
+36U19*Enregistrer_t 36=34 36>52 36>71 11|34b15 43l9 43t22
+36a34 T{17A14} 37r41 37r67 39r54 39r79 39r94 11|34b29 42m29 42r29
+36*52 Cle{5+10} 37r44 37r70 39r57 11|34b47 37r15 38r24 40r24 42r38
+36*71 Donnee{6+10} 37r77 11|34b66 42r42
+43U19*Supprimer_t 43=32 43>50 11|45b15 54l9 54t20
+43a32 T{17A14} 44r36 44r51 45r49 11|45b27 53m19 53r19
+43*50 Cle{5+10} 45r52 11|45b45 48r16 49r24 51r24 53r28
+49V18*Cle_Presente_t{boolean} 37s25 39s38 45s33 49>34 49>48 11|56b14 63l9
+. 63t23
+49a34 T{17A14} 11|56b29 59r47 62r29
+49*48 Cle{5+10} 11|56b42 59r52 62r34
+54V18*La_Donnee_t{6+10} 37s54 54>31 54>45 11|65b14 74l9 74t20
+54a31 T{17A14} 11|65b27 73r26
+54*45 Cle{5+10} 11|65b41 68r16 69r24 71r24 73r36
+58U19*Vider_t 58=28 11|76b15 82l9 82t16
+58a28 T{17A14} 59r33 11|76b23 80m19 80r19
+63U32 Traiter_t 63>42 63>60 11|88r70
+63*42 Cle{5+10}
+63*60 Donnee{6+10}
+64u15*Pour_Chaque_t 64>30 11|86b15 95l9 95t22
+64a30 T{17A14} 11|86b29 93r33
+X 11 th.adb
+9i13 i{integer} 10r27
+17i13 i{integer} 19r15 19r41 20m13 20r16 22r27
+26i9 Taille_Tableau{integer} 29m13 29r30 31r16
+28i13 i{integer} 29r54
+35i9 cle_t{integer} 38m13 40m13 42r31
+46i9 cle_t{integer} 49m13 51m13 53r21
+57i9 i{integer} 59r15 59r49 60m13 60r16 62r31
+66i9 cle_t{integer} 69m13 71m13 73r28
+79i13 i{integer} 80r21
+88U19 Pour_Chaque_tableau[4|58] 93s13
+92i13 i{integer} 93r35
+

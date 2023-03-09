@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project>
+    <vfs_file>/home/aseghrou/1A/pim/tp/EF11/src/Source/huffman.gpr</vfs_file>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/EF11/src/Source/huffman.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/EF11/src/Source/src/arbre.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/EF11/src/Source/huffman.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/EF11/src/Source/src/arbre.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/EF11/src/Source/huffman.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/EF11/src/Source/src/compresser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/EF11/src/Source/huffman.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/EF11/src/Source/src/compression.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/EF11/src/Source/huffman.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/EF11/src/Source/src/decompresser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/EF11/src/Source/huffman.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/EF11/src/Source/src/decompression.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/EF11/src/Source/huffman.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/EF11/src/Source/src/decompresser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/EF11/src/Source/huffman.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/EF11/src/Source/src/arbre.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 30" line=" 317" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/EF11/src/Source/huffman.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/EF11/src/Source/src/arbre.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/EF11/src/Source/huffman.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/EF11/src/Source/src/test_arbre.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>/home/aseghrou/1A/pim/tp/EF11/src/Source/huffman.gpr</vfs_project>
+      <vfs_file>/home/aseghrou/1A/pim/tp/EF11/src/Source/src/table.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

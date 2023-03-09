@@ -1,0 +1,4 @@
+
+package H_Exceptions is
+	Table_vide  : Exception;
+end H_Exceptions;

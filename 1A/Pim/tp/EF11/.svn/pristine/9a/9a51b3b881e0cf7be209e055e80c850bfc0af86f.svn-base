@@ -1,0 +1,28 @@
+with Arbre; use Arbre;
+with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
+with Ada.Streams.Stream_IO; use Ada.Streams.Stream_IO;
+with Ada.Text_IO; use Ada.Text_IO;
+with Table;use Table;
+
+
+procedure test is
+    Nom_Fichier : String :=  "text.txt";
+    File      : Ada.Streams.Stream_IO.File_Type;
+    S:T_Chaine;
+    Arbre: T_Arbre;
+    Chaine: T_Chaine;
+    Sda: T_Table;
+    inutile:Unbounded_String;
+    inutile2:T_Octet;
+begin
+    Initialiser(Sda);
+    Frequence(S,Nom_Fichier,File);
+    Construction_Arbre(S,Arbre);
+    Put(To_String(Code(Arbre)));
+
+    New_Line;
+    Construction_Table(Arbre,Sda);
+    Mise_a_jour(Sda,inutile,inutile2);
+    Affiche_Table(Sda);
+    Afficher_Arbre(Arbre);
+end test;

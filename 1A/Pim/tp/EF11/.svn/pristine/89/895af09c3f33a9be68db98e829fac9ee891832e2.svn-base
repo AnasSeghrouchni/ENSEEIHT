@@ -1,0 +1,22 @@
+with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
+with Ada.Streams.Stream_IO; use Ada.Streams.Stream_IO;
+with Ada.Text_IO; use Ada.Text_IO;
+with Arbre; use Arbre;
+with Table;use Table;
+
+package Compression is
+
+    type T_Octet is mod 2**8;
+    for T_Octet'Size use 8;
+
+   procedure Cree_Huffman(Nom_Fichier : in String; A: out T_Arbre);
+
+   procedure Reecriture(Texte: in Ada.Streams.Stream_IO.File_Type;Nom_Texte: in string;
+                        Texte_compresse: out Ada.Streams.Stream_IO.File_Type; Arbre : in T_Arbre);
+
+
+
+
+
+ end Compression;
+

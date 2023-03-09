@@ -1,0 +1,2 @@
+exemple_dates.adb:10:31: error: "OCTOBRE" is not visible
+exemple_dates.adb:10:31: error: non-visible (private) declaration at dates.ads:58

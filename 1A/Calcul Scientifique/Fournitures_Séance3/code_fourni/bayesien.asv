@@ -1,0 +1,20 @@
+% Données :
+% DataA      : les individus de la base
+% X : donnée de dimension (nb, q)
+function [C]=bayesien(X,DataA,nb_posture_par_image,nb_image)
+    %image moyenne pour chaque image de la base 
+    for j = 1:nb_image
+          X= single(zeros(nb_posture_par_image,2));
+    for i = 1:nb_posture_par_image
+	    im = eval([numstr(j) '_' num2str(i)]);
+	    X(i,:) = moyenne(im);
+    end
+    end
+    %determination de mu et sigma
+    X_c=X-mean(X);
+    n=length(X);
+    sigma=(1/n).*X_c'*X_c;
+    mu=(1/n).*X'*ones(n,1)
+    P=gaussienne(X,mu,sigma);
+end
+

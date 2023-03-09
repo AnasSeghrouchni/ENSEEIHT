@@ -1,0 +1,29 @@
+with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
+with Ada.Streams.Stream_IO; use Ada.Streams.Stream_IO;
+with Ada.Text_IO; use Ada.Text_IO;
+with Arbre; use Arbre;
+with LCA;
+
+package Compression is
+
+    type T_Octet is mod 2**8;
+    for T_Octet'Size use 8;
+
+    package Table is new
+            LCA(T_Cle => T_Octet ,T_Donnee => Unbounded_String);
+    use Table;
+
+   procedure Cree_Huffman(Nom_Fichier : in String; A: out T_Arbre);
+
+   procedure Reecriture(Texte: in Ada.Streams.Stream_IO.File_Type;Nom_Texte: in string;
+                        Texte_compresse: out Ada.Streams.Stream_IO.File_Type; Arbre : in T_Arbre);
+
+   procedure Construction_table(Arbre:in T_Arbre; Sda:in out T_LCA; Chaine: in Unbounded_String);
+
+   procedure Afficher_Table(Sda:T_LCA);
+
+
+
+
+ end Compression;
+

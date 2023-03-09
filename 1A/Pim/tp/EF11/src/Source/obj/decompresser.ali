@@ -1,0 +1,106 @@
+V "GNAT Lib v2021"
+M P W=b
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P SS ZX
+
+RN
+RV NO_IO
+RV NO_SECONDARY_STACK
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U decompresser%b	decompresser.adb	361cfb7e NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.command_line%s	a-comlin.adb		a-comlin.ali
+W ada.streams%s		a-stream.adb		a-stream.ali
+W ada.streams.stream_io%s  a-ststio.adb		a-ststio.ali
+W ada.strings%s		a-string.ads		a-string.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W arbre%s		arbre.adb		arbre.ali
+W decompression%s	decompression.adb	decompression.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W table%s		table.adb		table.ali
+
+D ada.ads		20210520051130 76789da1 ada%s
+D a-charac.ads		20210520051127 2d3ec45b ada.characters%s
+D a-chlat1.ads		20210520051127 66457d31 ada.characters.latin_1%s
+D a-comlin.ads		20210520051127 4aa66568 ada.command_line%s
+D a-except.ads		20210520051127 946f3014 ada.exceptions%s
+D a-finali.ads		20210520051127 bf4f806b ada.finalization%s
+D a-ioexce.ads		20210520051127 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210520051128 119b8fb3 ada.streams%s
+D a-ststio.ads		20210520051128 d6d358e8 ada.streams.stream_io%s
+D a-string.ads		20210520051128 90ac6797 ada.strings%s
+D a-strmap.ads		20210520051128 5a88892a ada.strings.maps%s
+D a-sttebu.ads		20210520051128 18209c64 ada.strings.text_buffers%s
+D a-strunb.ads		20210520051128 03325227 ada.strings.unbounded%s
+D a-stuten.ads		20210520051128 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210520051129 9eaa38c6 ada.tags%s
+D a-textio.ads		20210520051129 aef4d56d ada.text_io%s
+D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20210520051129 c3a8ac65 ada.unchecked_deallocation%s
+D arbre.ads		20220115221601 c1158a23 arbre%s
+D decompresser.adb	20220113212248 8352fb1b decompresser%b
+D decompression.ads	20220115123012 d0a9f19b decompression%s
+D interfac.ads		20210520051131 edec285f interfaces%s
+D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
+D system.ads		20210520051134 a2da961d system%s
+D s-atocou.ads		20210520051131 b45c2d8d system.atomic_counters%s
+D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210520051131 54135002 system.exception_table%s
+D s-ficobl.ads		20210520051131 078245e4 system.file_control_block%s
+D s-finmas.ads		20210520051131 1ab4dba8 system.finalization_masters%s
+D s-finroo.ads		20210520051131 4ff27390 system.finalization_root%s
+D s-parame.ads		20210520051133 4752c4cb system.parameters%s
+D s-pooglo.ads		20210520051133 ede33ef8 system.pool_global%s
+D s-putima.ads		20210520051133 4e095881 system.put_images%s
+D s-secsta.ads		20210520051133 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20210520051133 a7318a92 system.soft_links%s
+D s-stache.ads		20210520051133 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210520051133 472fbca8 system.standard_library%s
+D s-stoele.ads		20210520051133 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210520051133 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20210520051133 e9fa2dd8 system.storage_pools%s
+D s-stratt.ads		20210520051133 7bdda3fa system.stream_attributes%s
+D s-traent.ads		20210520051133 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210520051133 2b077493 system.unsigned_types%s
+D s-wchcon.ads		20210520051134 1b7d22d2 system.wch_con%s
+D table.ads		20220115183054 9541c117 table%s
+D unchconv.ads		20210520051134 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z b b [decompresser standard 10 11 none]
+G r c none [decompresser standard 10 11 none] [decompresse decompression 14 15 none]
+X 1 ada.ads
+16K9*Ada 20e8 20|1r6 1r28 3r6 3r33 4r6 4r33 5r6 5r23
+X 4 a-comlin.ads
+36K13*Command_Line 144e21 20|1w10 1r32
+52V13*Argument{string} 20|15s17
+X 8 a-stream.ads
+36K13*Streams 87e16 20|4r10 4r37
+X 9 a-ststio.ads
+39K21*Stream_IO 224e26 20|4w18 4r45
+X 10 a-string.ads
+16K13*Strings 35e16 20|3r10 3r37
+X 13 a-strunb.ads
+83K21*Unbounded 765e26 20|3w18 3r45
+X 16 a-textio.ads
+58K13*Text_IO 725e16 20|5w10 5r27
+262U14*New_Line 20|14s5 16s5
+X 19 arbre.ads
+8K9*Arbre 93e10 20|2w6 2r17
+17P10*T_Arbre 20|11r11
+X 20 decompresser.adb
+10U11*Decompresser 10b11 17l5 17t17
+11p5 Arbre{19|17P10}
+12p5 Table{45|9P10}
+X 21 decompression.ads
+7K9*Decompression 20|7w6 7r24 21|17e18
+14U15*Decompresse 20|15s5
+X 45 table.ads
+5K9*Table 20|6w6 6r16 45|75e10
+9P10*T_Table 20|12r11
+

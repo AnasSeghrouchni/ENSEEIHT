@@ -1,0 +1,54 @@
+generic
+
+   Capacite : integer;
+   type T_Donnee1 is private;
+
+
+package Huffman is
+
+   type T_Arbre is limited private;
+   type T_Tab is limited private;
+
+   -- Enregistre dans un tableau la presence d'une donnée
+   procedure Enregistrer (Tab : in out T_Tableau ;Donnee1 : in T_Donnee1) with
+     Post => ;
+
+   --procedure Lire(;
+
+
+-- Renvoie les indices des 2 arbres dont les fréquences sont les plus petites
+   procedure Mins(Tab : in T_Tableau ; Min1 : out integer ; Min2 : out integer ) with
+     Post => Min1 > 0 and Min2>0 and Min1<Tab.Taille and Min2<Tab.Taille;
+
+
+   Procedure Arbre(Tab : in T_Tableau ; Arbre : out T_Arbre) with
+     Post => ;
+
+   --Savoir si un arbre n'a pas de fils gauche ni de fils droit (c'est une feuille).
+   Function Est_Feuille(Arbre : in) return boolean;
+
+
+
+
+
+private
+
+   type T_Arbre;
+
+   type T_Voisin is access T_Arbre;
+
+   type T_Arbre is record
+      Donnee1 : T_Donnee1;
+      Frequence : integer;
+      Droite : T_Voisin;
+      Gauche : T_Voisin;
+   end record;
+
+   type T_Tab is array(1..256) of T_Cellule;
+
+   type T_Tableau is record
+      Tableau : T_Tab;
+      Taille : integer;
+   end record;
+
+end Huffman;

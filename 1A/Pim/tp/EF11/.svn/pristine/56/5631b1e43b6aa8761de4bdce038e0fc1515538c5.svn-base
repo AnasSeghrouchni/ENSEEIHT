@@ -1,0 +1,17 @@
+with Arbre; use Arbre;
+with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
+with Ada.Streams.Stream_IO; use Ada.Streams.Stream_IO;
+with Ada.Text_IO; use Ada.Text_IO;
+with Table;use Table;
+with DeCompression; use Decompression;
+
+procedure test_decompression is
+   Nom_Fichier: String:="text.txt.hff";
+    Tableau:T_Tab_Oct;
+    String:Unbounded_String;
+    a:T_Arbre;
+    i_str:integer:=2;
+    Arbre:T_Arbre;
+begin
+    Decompresse(Nom_Fichier);
+end;

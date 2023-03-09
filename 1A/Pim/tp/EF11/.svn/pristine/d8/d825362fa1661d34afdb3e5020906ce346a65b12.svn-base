@@ -1,0 +1,69 @@
+with SDA_Exceptions;         use SDA_Exceptions;
+with Ada.Unchecked_Deallocation;
+
+package Chaine is
+
+    procedure Free_Sda is
+		new Ada.Unchecked_Deallocation (Object => T_Cellule, Name => T_Chaine);
+
+    Procedure Initialiser(Sda: out T_Chaine) is
+    begin
+        Sda:=Null;
+    end;
+
+    function Est_Vide(Sda) is
+    begin
+        return Sda=Null;
+    end;
+
+    procedure enregistrer(sda,octet) is
+    begin
+        if Est_Present(Sda,Octet) then
+            if Sda.Arbre.Donnee = Octet then
+                Sda.Arbre.Frequence:=Sda.Arbre.Frequence+1;
+            else
+                enregistrer(sda.Suivant,Octet);
+            end if;
+        else
+            if Sda.Arbre.Donnee = Null then
+                Sda.Arbre.Frequence:=1;
+                Sda.Arbre.Donnee:=Octet;
+            else
+                enregistrer(sda.Suivant,Octet);
+            end if;
+        end if;
+    end enregistrer;
+
+
+    procedure Frequence(Sda : in out T_Chaine, File_Name,File) is
+
+        S : Stream_Access;
+        Octet : T_OCtet;
+
+    begin
+
+        Open(File,In_File,File_Name);
+        S:=Stream(File);
+        while not End_Of_File(File) loop
+            Octet:=T_Octet’Input(S);
+            Enregistrer(Sda,Octet);             // incrémente si présent, rajoute sinon
+                    New_Line;
+        end loop;
+
+        Close(File);
+
+    end Frequence;
+
+    procedure Vider_Sda(Sda : in out T_Chaine) is
+    begin
+        if Sda.all.Suivante=Null then
+            Free_Sda(Sda);
+        else
+            Vider_Sda(Sda.all.Suivante);
+            Free_Sda(Sda);
+        Free(Sda);
+    end Vider_Sda;
+
+
+
+end chaine;

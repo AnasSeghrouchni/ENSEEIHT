@@ -1,0 +1,48 @@
+with SDA_Exceptions;         use SDA_Exceptions;
+with Ada.Unchecked_Deallocation;
+
+package body Arbre is
+
+    function Est_Feuille (Arbre: in T_Arbre) return Boolean is
+        begin
+        return Arbre.Droite=Null and Arbre.Gauche=Null;
+        end Est_Feuille;
+
+
+    function Code(Arbre:in T_Arbre) return Unbounded_String is
+        Temporaire : T_Arbre;
+        Code_Arbre:Unbounded_String;
+    begin
+        Code_Abre:="";
+        Initialiser(P);
+        Empiler(P,Arbre);
+        while not Est_Vide(P) loop
+            Temporaire:=Sommet(P);
+            Depiler(P);
+            if Est_Feuille(Temporaire) then
+                    Code_Arbre:='1'+Code_Arbre;
+            else
+                Empiler(Arbre.Droite);
+                Empiler(Arbre.Gauche);
+                Code_Arbre:='0'+Code_Arbre;
+            end if;
+        end loop;
+        return Code_Arbre;
+    end Code;
+
+
+
+
+
+    procedure Texte_Arbre (Arbre: in T_Arbre) is
+        Temporaire : T_Arbre;
+    begin
+        Initialiser(P);
+        Empiler(P,Arbre);
+        while not Est_Vide(P) loop
+            Temporaire:=Sommet(P);
+            Depiler(P);
+            if Est_Feuille(Temporaire) then
+                Afficher(Temporaire.Donnee);
+            else
+                Put(

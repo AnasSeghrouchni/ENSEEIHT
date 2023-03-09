@@ -1,0 +1,3 @@
+th.adb:1:06: warning: no entities of "SDA_Exceptions" are referenced [-gnatwu]
+th.adb:1:30: warning: use clause for package "SDA_Exceptions" has no effect [-gnatwu]
+th.adb:2:09: warning: unit "Ada.Unchecked_Deallocation" is not referenced [-gnatwu]

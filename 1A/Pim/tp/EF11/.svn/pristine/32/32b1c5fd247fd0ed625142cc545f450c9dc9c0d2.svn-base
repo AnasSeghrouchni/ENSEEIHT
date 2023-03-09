@@ -1,0 +1,13 @@
+with Arbre; use Arbre;
+with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
+with Ada.Streams.Stream_IO; use Ada.Streams.Stream_IO;
+with Ada.Text_IO; use Ada.Text_IO;
+with Table;use Table;
+
+package Compression is
+
+   procedure Ecrit_Caracteres(S:in Stream_Access; Table : in T_Table);
+
+   procedure Compresse(Nom_Fichier: in String; tiret_b :in Boolean);
+
+end Compression;

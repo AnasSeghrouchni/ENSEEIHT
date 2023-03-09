@@ -1,0 +1,34 @@
+package body compression is
+
+    procedure Cree_Huffman(Nom_Fichier : in String; A: out T_Arbre) is
+        S:T_Chaine;
+    begin
+        Frequence(Sda,Nom_Fichier,File);
+        Construction_Arbre(Sda,A);
+    end;
+
+    procedure Construsction_table(Arbre:T_Arbre; Sda:T_LCA; Chaine:Unbounded_String) is
+    begin
+        if Est_feuille(arbre) then
+            Enregistrer(Sda, Arbre.all.Cle, Chaine);
+        else
+            Construction_table(Arbre.all.Gauche,Sda,Chaine & "0");
+            Construction_table(Arbre.all.Droite,Sda,Chaine & "1");
+        end if;
+    end Construction_table;
+
+    Procedure Affiche_Couple(Octet : T_Octet, Str : Unbounded_String) is
+         : exception;
+    Begin
+        if
+        Put("‘");
+        Put(transformer l'octet en caractere);
+        Put("-->");
+        Put();
+        New_Line;
+    End Affiche_Couple;
+    Procedure Afficher_Table is new Pour_Chaque(Affiche_Couple);
+
+
+
+end compression;

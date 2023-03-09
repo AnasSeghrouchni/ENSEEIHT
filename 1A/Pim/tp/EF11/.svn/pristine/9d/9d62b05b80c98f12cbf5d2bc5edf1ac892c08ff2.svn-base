@@ -1,0 +1,28 @@
+with LCA;
+with Chaine;use Chaine;
+
+
+package Huffman is
+
+    Procedure Affiche_Couple(Octet : T_Octet, Str : Unbounded_String) is
+    Begin
+        Put("‘");
+        Put(transformer l'octet en caractere);
+        Put("-->");
+        Put(Unbouded to string str);
+        New_Line;
+    End Affiche_Couple;
+    Procedure Afficher_Table is new Pour_Chaque(Affiche_Couple);
+
+    procedure construsction_table(Arbre: in T_Arbre, Sda: in out T_LCA, Chaine: in Unbounded_String) is
+    begin
+        if Est_feuille(arbre) then
+            Enregistrer(sda, Arbre.all.Cle, chaine);
+        else
+            Construction_table(arbre.all.gauche,sda,chaine+"0");
+            Construction_table(arbre.all.droite,sda,chaine+"1");
+        end if;
+    end construction_table;
+
+
+end Huffmann
