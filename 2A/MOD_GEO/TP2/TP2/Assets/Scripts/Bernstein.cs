@@ -22,20 +22,31 @@ public class Bernstein : MonoBehaviour
     // ListePoints[0] : liste des points composant le poly de Bernstein 0 sur n-1
     private List<List<Vector2>> ListePoints = new List<List<Vector2>>();
 
-    //////////////////////////////////////////////////////////////////////////
-    // fonction : buildPolysBernstein                                       //
+    /////////////////////////////////////////////////////////////////////////// 
+    // fonction : buildPolysBernstein                                        //
     // semantique : remplit le vecteur ListePoints avec les listes des points//
-    //              composant les polys de Bernstein                        //
-    // params : aucun                                                       //
-    // sortie : aucune                                                      //
-    //////////////////////////////////////////////////////////////////////////
+    //              composant les polys de Bernstein                         //
+    // params : aucun                                                        //
+    // sortie : aucune                                                       //
+    ///////////////////////////////////////////////////////////////////////////
     void buildPolysBernstein() {
-        // TODO !!
+        int n = nombrePolynomesBernstein-1;
+        List<float> tToEval = buildEchantillonnage();
+        for(int i=0;i<=n;i++){
+            long kparmin = KparmiN(i,n);
+            List<Vector2> L = new List<Vector2>();
+            for(int j=0;j<tToEval.Count;j++){
+                float tmp = kparmin*Mathf.Pow(1-tToEval[j],n-i)*Mathf.Pow(tToEval[j],i);
+                Vector2 v = new Vector2(tToEval[j],tmp);
+                L.Add(v);
+            }
+            ListePoints.Add(L);
+        }
     }
 
     ////////////////////////////////////////////////////////////////////////////
     // Fonction KparmiN                                                       //
-    // Semantique : etant donnés k et n, calcule k parmi n                     //
+    // Semantique : etant donnés k et n, calcule k parmi n                    //
     // Entrees : - int k                                                      //
     //           - int n                                                      //
     // Sortie : k parmi n                                                     //
@@ -63,7 +74,12 @@ public class Bernstein : MonoBehaviour
     List<float> buildEchantillonnage()
     {
         List<float> tToEval = new List<float>();
-        // TODO !!
+        float t = 0;
+        while (t<1)
+        {
+         tToEval.Add(t);
+         t += pas;   
+        }
         return tToEval;
     }
 

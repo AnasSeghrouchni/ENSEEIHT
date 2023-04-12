@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 //////////////////////////////////////////////////////////////////////////
 ///////////////// Classe qui gère l'évaluation via DCJ ///////////////////
@@ -27,7 +28,12 @@ public class DeCasteljauEvaluation : MonoBehaviour
     List<float> buildEchantillonnage()
     {
         List<float> tToEval = new List<float>();
-        // TODO !!
+        float t = 0;
+        while (t<1)
+        {
+         tToEval.Add(t);
+         t += pas;   
+        }
         return tToEval;
     }
 
@@ -44,8 +50,15 @@ public class DeCasteljauEvaluation : MonoBehaviour
     //////////////////////////////////////////////////////////////////////////
     Vector2 DeCasteljau(List<float> X, List<float> Y, float t)
     {
-        // TODO !!
-        return new Vector2(0.0f,0.0f);
+        List<float> Xtemp = new List<float>(X);
+        List<float> Ytemp = new List<float>(Y);
+        for (int j=1;j<X.Count;j++){
+            for(int i=0;i<X.Count-j;i++){
+                X[i] = (1-t)*X[i]+t*X[i+1];
+                Y[i] = (1-t)*Y[i]+(t)*Y[i+1];
+            }
+        }
+        return new Vector2(X[0],Y[0]);
     }
 
     //////////////////////////////////////////////////////////////////////////

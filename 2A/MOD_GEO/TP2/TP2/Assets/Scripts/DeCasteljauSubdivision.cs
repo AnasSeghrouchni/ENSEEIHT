@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Linq;
 
 //////////////////////////////////////////////////////////////////////////
 ///////////////// Classe qui gère la subdivision via DCJ /////////////////
@@ -35,11 +36,46 @@ public class DeCasteljauSubdivision : MonoBehaviour
     {
         List<float> XSortie = new List<float>();
         List<float> YSortie = new List<float>();
+        List<float> Xcopy = new List<float>(X);
+        List<float> Ycopy = new List<float>(Y);
+        List<float> XGauche = new List<float>();
+        List<float> XDroite = new List<float>();
+        List<float> YGauche = new List<float>();
+        List<float> YDroite = new List<float>();
         
-        // TODO !!
-
-        return (XSortie, YSortie);
+        if (nombreDeSubdivision == 0)
+        {
+            return (X,Y);
+        }
+        else
+        {
+            XGauche.Add(X[0]);
+            XDroite.Add(X[X.Count -1]);
+            YGauche.Add(Y[0]);
+            YDroite.Add(Y[Y.Count -1]);
+            for(int j=0;j<Xcopy.Count;j++){
+                List<float> Xcopy1 = new List<float>();
+                List<float> Ycopy1 = new List<float>();
+                for(int i = 0; i<Xcopy.Count-1;i++){
+                    Xcopy1.Add((Xcopy[i] + Xcopy[i+1])/2);
+                    Ycopy1.Add((Ycopy[i] + Ycopy[i+1])/2);
+                }
+                XGauche.Add(Xcopy1[0]);
+                YGauche.Add(Ycopy1[0]);
+                XDroite.Add(Xcopy1[Xcopy1.Count-1]);
+                YDroite.Add(Ycopy1[Ycopy1.Count-1]);
+                Xcopy = Xcopy1;
+                Ycopy = Ycopy1;
+            }
+        XDroite = Enumerable.Reverse(XDroite).ToList();
+        (XGauche, YGauche) = DeCasteljauSub(XGauche,YGauche,nombreDeSubdivision-1);
+        YDroite = Enumerable.Reverse(YDroite).ToList();
+        (XDroite, YDroite) = DeCasteljauSub(XDroite,YDroite,nombreDeSubdivision-1);
+        return (XGauche.Concat(XDroite).ToList(),YGauche.Concat(YDroite).ToList());
+        }
     }
+    
+        
 
     //////////////////////////////////////////////////////////////////////////
     //////////////////////////// NE PAS TOUCHER //////////////////////////////
