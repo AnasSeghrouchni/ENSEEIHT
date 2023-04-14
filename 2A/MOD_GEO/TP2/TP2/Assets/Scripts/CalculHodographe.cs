@@ -28,7 +28,7 @@ public class CalculHodographe : MonoBehaviour
     //////////////////////////////////////////////////////////////////////////
     (List<float>, List<float>) DeCasteljauSub(List<float> X, List<float> Y, int nombreDeSubdivision)
     {
-         List<float> XSortie = new List<float>();
+        List<float> XSortie = new List<float>();
         List<float> YSortie = new List<float>();
         List<float> Xcopy = new List<float>(X);
         List<float> Ycopy = new List<float>(Y);
@@ -86,9 +86,11 @@ public class CalculHodographe : MonoBehaviour
     {
         List<float> XSortie = new List<float>();
         List<float> YSortie = new List<float>();
-
-        // TODO !!
-        
+        int n = X.Count;
+        for(int i = 0;i<n-1;i++){
+            XSortie.Add(n*(X[i+1]-X[i])-Cx);
+            YSortie.Add(n*(Y[i+1]-Y[i])-Cy);
+        }        
         return (XSortie, YSortie);
     }
 
