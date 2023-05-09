@@ -88,8 +88,8 @@ public class CalculHodographe : MonoBehaviour
         List<float> YSortie = new List<float>();
         int n = X.Count;
         for(int i = 0;i<n-1;i++){
-            XSortie.Add(n*(X[i+1]-X[i])-Cx);
-            YSortie.Add(n*(Y[i+1]-Y[i])-Cy);
+            XSortie.Add((X[i+1]-X[i])+Cx);
+            YSortie.Add((Y[i+1]-Y[i])+Cy);
         }        
         return (XSortie, YSortie);
     }

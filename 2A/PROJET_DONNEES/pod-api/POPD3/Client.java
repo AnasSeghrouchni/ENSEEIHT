@@ -35,6 +35,7 @@ public class Client extends UnicastRemoteObject implements Client_itf {
         	String URL = "//" + InetAddress.getLocalHost().getHostName() + ":" + port + "/serveur";
 			serveur = (Server_itf) Naming.lookup(URL);
 			cache = new HashMap<Integer, SharedObject>();
+			serveur.addClient(Client.client_this);
 
 		} catch (Exception e) {
 			System.err.println("Client exception: " + e.toString());
@@ -42,6 +43,14 @@ public class Client extends UnicastRemoteObject implements Client_itf {
 		}
 	}
 	
+	public static publish(String name, Object o, boolean reset){
+		int version = server.publish(name, o, reset);
+		SharedObject so = new SharedObject(obj, version);
+		return so;
+	}
+
+
+
 	// lookup in the name server
 	public static SharedObject lookup(String name) {
 		int id = -1;

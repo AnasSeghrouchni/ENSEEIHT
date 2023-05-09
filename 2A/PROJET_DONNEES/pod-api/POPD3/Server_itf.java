@@ -1,10 +1,17 @@
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+import java.util.Set;
+
 public interface Server_itf extends java.rmi.Remote {
+	// architecture nécessaire au démarrage : serveur dans registry, 
+	// tous sites enregistrés auprès du serveur
+	// enregistre un site et récupère la liste complète (cardinal connu au lancement)
+	public Set<Client_itf> addClient(Client_itf client) throws RemoteException;
+
+	// nommage des objets partagés
+	public int publish(String name, Object o, boolean reset) throws RemoteException;
 	public int lookup(String name) throws java.rmi.RemoteException;
-	public void register(String name, int id) throws java.rmi.RemoteException;
-	public int create(Object o) throws java.rmi.RemoteException;
-	public Object lock_read(int id, Client_itf client) throws java.rmi.RemoteException;
-	public Object lock_write(int id, Client_itf client) throws java.rmi.RemoteException;
-	public void follow(int id, Client_itf client) throws java.rmi.RemoteException;
-	public void unfollow(int id, Client_itf client) throws java.rmi.RemoteException;
-	public void maj(int id, Object obj) throws java.rmi.RemoteException;
+	
+	// le serveur centralise (-> ordonne) les écritures. Renvoie le numéro de version
+	public int write(int idObjet, Object valeur) throws RemoteException;
 }
