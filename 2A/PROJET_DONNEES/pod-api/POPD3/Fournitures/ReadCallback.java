@@ -1,7 +1,8 @@
+import java.io.Serializable;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
-public class ReadCallback extends UnicastRemoteObject  implements ReadCallback_itf {
+public class ReadCallback  implements ReadCallback_itf, Serializable{
     private int version;
     private Object o;
     private int compteur;
