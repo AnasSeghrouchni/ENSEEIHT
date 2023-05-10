@@ -71,7 +71,6 @@ public class Client extends UnicastRemoteObject implements Client_itf {
 			so.setObjet(valeur);
 			so.setVersion(version);
 		}
-		wcb.reponse();
 		System.out.println(wcb.getCompteur());
 		System.out.println(clients.size()/2);
 	}
@@ -139,34 +138,8 @@ public class Client extends UnicastRemoteObject implements Client_itf {
 	public static void write(int id, Object o) throws RemoteException{
 		SharedObject so = cache.get(id);
 		so.setObjet(o);
-		so.setVersion(so.getVersion() + 1);
-		int v = so.getVersion();
-		WriteCallback wcb = new WriteCallback();
-		for(Client_itf c : clients){
-				Thread t = new Thread() {
-					public void run(){
-						try {
-							c.update(id, v, o, wcb);
-						} catch (RemoteException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-					}
-				};
-				t.start();
-		}
-		while(wcb.getCompteur()<clients.size()/2){
-
-			System.out.println(wcb.getCompteur());
-		}
-		try {
-			serveur.write(id, o);
-		} catch (RemoteException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-
+		int v = serveur.write(id, o);	
+		so.setVersion(v + 1);	
 	}
 
 	public static void read(int id) throws RemoteException{

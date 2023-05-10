@@ -76,6 +76,24 @@ public class Server extends UnicastRemoteObject implements Server_itf{
         synchronized(this){
         ServerObject sero = id_to_so.get(id);
         sero.maj(o);
+        int v = sero.getVersion();
+        WriteCallback wcb = new WriteCallback();
+        for(Client_itf c : clients){
+				Thread t = new Thread() {
+					public void run(){
+						try {
+							c.update(id, v, o, wcb);
+                            wcb.reponse();
+						} catch (RemoteException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					}
+				};
+				t.start();
+		}
+		while(wcb.getCompteur()<clients.size()/2){
+		}
         return sero.getVersion();
         }
     }

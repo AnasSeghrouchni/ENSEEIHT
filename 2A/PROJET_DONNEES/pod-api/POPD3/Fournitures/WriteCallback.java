@@ -1,7 +1,8 @@
+import java.io.Serializable;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
-public class WriteCallback extends UnicastRemoteObject implements WriteCallback_itf{
+public class WriteCallback implements WriteCallback_itf, Serializable{
     private int compteur;
 
     public WriteCallback() throws RemoteException{
