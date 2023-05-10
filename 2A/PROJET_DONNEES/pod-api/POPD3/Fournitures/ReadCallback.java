@@ -3,34 +3,44 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
 public class ReadCallback  implements ReadCallback_itf, Serializable{
-    private int version;
-    private Object o;
-    private int compteur;
+    private static int version;
+    private static Object o;
+    private static int compteur;
 
     public ReadCallback() throws RemoteException{
         super();
-        this.version = 0;
-        this.o = null;
-        this.compteur = 0;
+        version = 0;
+        o = null;
+        compteur = 0;
     }
 
-    public void reponse(int version, Object o) throws java.rmi.RemoteException{
-       this.compteur++;
-       if (this.version < version){
-           this.version = version;
-           this.o = o;
+    public void reponse(int v, Object obj) throws java.rmi.RemoteException{
+        synchronized(this){
+            compteur++;
+        }
+       if (version < v){
+           version = v;
+           o = obj;
        }
     }  
     
-    public int getCompteur(){
-        return this.compteur;
+    public int getCompteur() throws java.rmi.RemoteException{
+        return compteur;
     }
 
-    public int getVersion(){
-        return this.version;
+    public int getVersion() throws java.rmi.RemoteException{
+        return version;
     }
 
-    public Object getObjet(){
-        return this.o;
+    public void setVersion(int v) throws java.rmi.RemoteException{
+        version = v;
+    }
+
+    public void setObjet(Object obj) throws java.rmi.RemoteException{
+        o = obj;
+    }
+
+    public Object getObjet() throws java.rmi.RemoteException{
+        return o;
     }
 }

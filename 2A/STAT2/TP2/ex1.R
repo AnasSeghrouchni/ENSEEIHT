@@ -1,0 +1,33 @@
+data=read.table("DataTP.txt",header=TRUE)
+dataAIX=subset(data,STATION=="Aix")
+s= summary(dataAIX)
+print(s)
+#print('Histo O3o')
+#x11(hist(dataAIX$O3o))
+#print('Hist O3p')
+#hist(dataAIX$O3p)
+print(var.test(dataAIX$O3o,dataAIX$O3p))
+print(t.test(dataAIX$O3o,dataAIX$O3p))
+print(cor.test(dataAIX$O3o,dataAIX$O3p))
+s = summary(lm(dataAIX$O3o~dataAIX$O3p))
+print(s)
+b0 = 50.9
+b1 = 0.51
+plot(dataAIX$O3p, dataAIX$O3o, type="p")
+abline(b0,b1)
+plot(dataAIX$O3o, type = 'p')
+points(dataAIX$O3p, col = 'blue', pch = 'x')
+points(b0+b1*dataAIX$O3p, col = 'red', pch = 'x')
+
+par(mfrow = c(3,2))
+hist(data$O3p)
+hist(data$TEMPE)
+hist(data$RMH2O)
+hist(data$NO2)
+hist(data$FF)
+
+pairs(data[,c(-1,-7)])
+
+regmult=lm(O3o~O3p+TEMPE+RMH2O+log(NO2)+FF,data)
+s = summary(regmult)
+print(s)

@@ -73,9 +73,9 @@ public class Server extends UnicastRemoteObject implements Server_itf{
  
 
     public int write(int id, Object o) throws RemoteException{
-        synchronized(this){
         ServerObject sero = id_to_so.get(id);
         sero.maj(o);
+        System.out.println("Mise à jour objet :" + id + " avec version" + sero.getVersion());
         int v = sero.getVersion();
         WriteCallback wcb = new WriteCallback();
         for(Client_itf c : clients){
@@ -83,7 +83,6 @@ public class Server extends UnicastRemoteObject implements Server_itf{
 					public void run(){
 						try {
 							c.update(id, v, o, wcb);
-                            wcb.reponse();
 						} catch (RemoteException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
@@ -92,25 +91,29 @@ public class Server extends UnicastRemoteObject implements Server_itf{
 				};
 				t.start();
 		}
+        System.out.println("On att les threads écriture...");
 		while(wcb.getCompteur()<clients.size()/2){
+            try {
+                System.out.println("On attend le compteur écriture : " + wcb.getCompteur());
+                Thread.sleep(100);
+            } catch (InterruptedException e){
+                e.printStackTrace();
+            }
 		}
+        System.out.println("Eriture propagée");
         return sero.getVersion();
-        }
     }
 
     public Set<Client_itf> setMonitor(Moniteur m) throws RemoteException{
         synchronized(this){
         this.moniteur = m;
-        if (clients.size() < nbClients){
+        while (clients.size() < nbClients){
             try {
                 wait();
             } catch (InterruptedException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
-        }
-        else{
-            notifyAll();
         }
         return clients;
     }

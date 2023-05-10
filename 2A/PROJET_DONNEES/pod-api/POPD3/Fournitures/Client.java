@@ -58,21 +58,21 @@ public class Client extends UnicastRemoteObject implements Client_itf {
 			so = new SharedObject(idObj, null);
 			cache.put(idObj, so);
 		}
-		rcb.reponse(so.getVersion(), so.getObjet());
+		rcb.reponse(idObj, so.getObjet());
 	}
 
 	public void update(int idObj, int version, Object valeur, WriteCallback wcb) throws java.rmi.RemoteException{
 		SharedObject so = cache.get(idObj);
 		if (so == null){
-			so = new SharedObject(idObj, null);
+			so = new SharedObject(idObj, valeur);
 			cache.put(idObj, so);
+			so.setVersion(version);
 		}
 		if (so.getVersion() < version){
 			so.setObjet(valeur);
 			so.setVersion(version);
 		}
-		System.out.println(wcb.getCompteur());
-		System.out.println(clients.size()/2);
+		wcb.reponse();
 	}
 
 	public String getSite() throws java.rmi.RemoteException{
@@ -143,12 +143,14 @@ public class Client extends UnicastRemoteObject implements Client_itf {
 	}
 
 	public static void read(int id) throws RemoteException{
+		SharedObject so = cache.get(id);
 		ReadCallback rcb = new ReadCallback();
 		for(Client_itf c : clients){
 			Thread t = new Thread() {
 				public void run(){
 					try {
 						c.reportValue(id, rcb);
+						System.out.println(rcb.getCompteur());
 					} catch (RemoteException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
@@ -157,9 +159,16 @@ public class Client extends UnicastRemoteObject implements Client_itf {
 			};
 			t.start();
 		}
+		System.out.println("On att les threads lectures");
 		while(rcb.getCompteur()<clients.size()/2){
+			try {
+				Thread.sleep(100);
+				System.out.println("Le compteur du read callback :" + rcb.getCompteur());
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 		}
-		SharedObject so = cache.get(id);
+		System.out.println("On a les threads lectures");
 		so.setVersion(rcb.getVersion());
 		so.setObjet(rcb.getObjet());
 	}
