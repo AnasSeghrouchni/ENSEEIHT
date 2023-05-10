@@ -61,18 +61,16 @@ public class Client extends UnicastRemoteObject implements Client_itf {
 		rcb.reponse(idObj, so.getObjet());
 	}
 
-	public void update(int idObj, int version, Object valeur, WriteCallback wcb) throws java.rmi.RemoteException{
-		SharedObject so = cache.get(idObj);
-		if (so == null){
-			so = new SharedObject(idObj, valeur);
-			cache.put(idObj, so);
-			so.setVersion(version);
-		}
+	public void update(int idObj, int version, Object valeur, WriteCallback_itf wcb) throws java.rmi.RemoteException{
+		System.out.println("Update demandé chez : " + myName);
+		SharedObject so = createOrget(idObj); 
 		if (so.getVersion() < version){
 			so.setObjet(valeur);
 			so.setVersion(version);
 		}
+		System.out.println("Update non encore effectué");
 		wcb.reponse();
+		System.out.println("Update effectué");
 	}
 
 	public String getSite() throws java.rmi.RemoteException{
@@ -134,9 +132,19 @@ public class Client extends UnicastRemoteObject implements Client_itf {
 	public static String getIdSite(){
 		return myName;
 	}
+
+	private static SharedObject createOrget(int id){
+		SharedObject so = cache.get(id);
+		if (so == null){
+			so = new SharedObject(id, null);
+			cache.put(id, so);
+		}
+		return so;
+	}
+
 	
 	public static void write(int id, Object o) throws RemoteException{
-		SharedObject so = cache.get(id);
+		SharedObject so = createOrget(id);
 		so.setObjet(o);
 		int v = serveur.write(id, o);	
 		so.setVersion(v + 1);	

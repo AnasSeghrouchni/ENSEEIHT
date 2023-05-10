@@ -1,22 +1,22 @@
 import java.io.Serializable;
+import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
-public class WriteCallback implements WriteCallback_itf, Serializable{
-    private static int compteur;
+public class WriteCallback extends UnicastRemoteObject implements WriteCallback_itf{
+    private boolean reponse;
 
     public WriteCallback() throws RemoteException{
         super();
-        compteur = 0;
+        this.reponse = false;
     }
 
-    public void reponse() throws java.rmi.RemoteException{
-        synchronized(this){
-            compteur++;
-        }
+    public synchronized void reponse() throws java.rmi.RemoteException{
+        this.reponse = true;    
     }
 
-    public int getCompteur(){
-        return compteur;
+    public boolean getReponse(){
+        return this.reponse;
     }
+
 }  

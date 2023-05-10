@@ -4,6 +4,7 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import javax.lang.model.util.ElementScanner6;
 
@@ -56,7 +57,6 @@ public class Server extends UnicastRemoteObject implements Server_itf{
             return id;
         }
         else{
-            
             ServerObject sero = new ServerObject(cpt, o);
             noms_to_id.put(name, cpt);
             id_to_so.put(cpt, sero);
@@ -75,14 +75,21 @@ public class Server extends UnicastRemoteObject implements Server_itf{
     public int write(int id, Object o) throws RemoteException{
         ServerObject sero = id_to_so.get(id);
         sero.maj(o);
-        System.out.println("Mise à jour objet :" + id + " avec version" + sero.getVersion());
+        System.out.println("Mise à jour objet : " + id + " avec version " + sero.getVersion());
         int v = sero.getVersion();
-        WriteCallback wcb = new WriteCallback();
+
+        AtomicInteger at_cpt = new AtomicInteger(0);
         for(Client_itf c : clients){
 				Thread t = new Thread() {
 					public void run(){
 						try {
+                            WriteCallback wcb = new WriteCallback();
+                            System.out.println("Je suis le thread");
 							c.update(id, v, o, wcb);
+                            System.out.println("J'ai appelé update");
+                            if (wcb.getReponse()){
+                                at_cpt.incrementAndGet();
+                            }
 						} catch (RemoteException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
@@ -92,9 +99,10 @@ public class Server extends UnicastRemoteObject implements Server_itf{
 				t.start();
 		}
         System.out.println("On att les threads écriture...");
-		while(wcb.getCompteur()<clients.size()/2){
+		while(at_cpt.get()<clients.size()/2){
             try {
-                System.out.println("On attend le compteur écriture : " + wcb.getCompteur());
+                int threadsEnCours = clients.size() - at_cpt.get();
+                //System.out.println("On attend le compteur écriture : " + at_cpt.get() + ", " + threadsEnCours + " thread(s) encore en cours d'exécution");
                 Thread.sleep(100);
             } catch (InterruptedException e){
                 e.printStackTrace();

@@ -23,7 +23,7 @@ public class SharedObject implements Serializable, SharedObject_itf {
     }
 
     public void setObjet(Object o) {
-        obj = o;
+        this.obj = o;
     }
 
     public int getId() {
