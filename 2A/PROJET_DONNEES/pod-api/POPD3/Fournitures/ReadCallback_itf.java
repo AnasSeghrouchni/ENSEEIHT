@@ -5,4 +5,5 @@ public interface ReadCallback_itf extends java.rmi.Remote {
     public Object getObjet() throws java.rmi.RemoteException;
     public void setVersion(int version) throws java.rmi.RemoteException;
     public void setObjet(Object o) throws java.rmi.RemoteException;
+    public boolean getReponse() throws java.rmi.RemoteException;
  }

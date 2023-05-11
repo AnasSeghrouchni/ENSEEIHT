@@ -26,21 +26,17 @@ public class Server extends UnicastRemoteObject implements Server_itf{
     }
 
     public Set<Client_itf> addClient(Client_itf client) throws java.rmi.RemoteException{
-        synchronized(this){
         clients.add(client);
-        if (clients.size() < nbClients){
+        while (clients.size() < nbClients){
             try {
-                wait();
+                Thread.sleep(100);
             } catch (InterruptedException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         }
-        else{
-            notifyAll();
-        }
+
         return clients;
-    }
     }   
     
     public int lookup(String name) throws RemoteException{
@@ -60,6 +56,7 @@ public class Server extends UnicastRemoteObject implements Server_itf{
             ServerObject sero = new ServerObject(cpt, o);
             noms_to_id.put(name, cpt);
             id_to_so.put(cpt, sero);
+            System.out.println("Creation de d'un serveurobject de l'objet : " + name + " avec id : " + cpt );
             cpt++;
             return cpt-1;
         }
@@ -77,7 +74,6 @@ public class Server extends UnicastRemoteObject implements Server_itf{
         sero.maj(o);
         System.out.println("Mise à jour objet : " + id + " avec version " + sero.getVersion());
         int v = sero.getVersion();
-
         AtomicInteger at_cpt = new AtomicInteger(0);
         for(Client_itf c : clients){
 				Thread t = new Thread() {
@@ -89,6 +85,7 @@ public class Server extends UnicastRemoteObject implements Server_itf{
                             System.out.println("J'ai appelé update");
                             if (wcb.getReponse()){
                                 at_cpt.incrementAndGet();
+                                System.out.println("J'ai reçu une réponse");
                             }
 						} catch (RemoteException e) {
 							// TODO Auto-generated catch block
@@ -99,10 +96,13 @@ public class Server extends UnicastRemoteObject implements Server_itf{
 				t.start();
 		}
         System.out.println("On att les threads écriture...");
+        System.out.println("Valeur du compteur avant la boucle" + at_cpt.get());
+        System.out.println("Nombre de clients/2 : " + (clients.size()/2));
+
 		while(at_cpt.get()<clients.size()/2){
             try {
                 int threadsEnCours = clients.size() - at_cpt.get();
-                //System.out.println("On attend le compteur écriture : " + at_cpt.get() + ", " + threadsEnCours + " thread(s) encore en cours d'exécution");
+                System.out.println("On attend le compteur écriture : " + at_cpt.get() + ", " + threadsEnCours + " thread(s) encore en cours d'exécution");
                 Thread.sleep(100);
             } catch (InterruptedException e){
                 e.printStackTrace();
@@ -117,7 +117,7 @@ public class Server extends UnicastRemoteObject implements Server_itf{
         this.moniteur = m;
         while (clients.size() < nbClients){
             try {
-                wait();
+                Thread.sleep(100);
             } catch (InterruptedException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();

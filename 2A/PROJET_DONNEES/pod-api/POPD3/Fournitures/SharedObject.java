@@ -38,13 +38,19 @@ public class SharedObject implements Serializable, SharedObject_itf {
         version = v;
     }
 
-    public void update(int v, Object valeur, WriteCallback wcb) {
+    public void update(int v, Object valeur, WriteCallback_itf wcb) {
         try {
             Client.monitor.feuVert(Client.getIdSite(),4); // ** Instrumentation
          	// ** attente quadruplée pour les ack, pour exhiber l'inversion de valeurs
          	// getIdSite identique à getSite, mais non Remote
          	
          	// suite de la méthode update... 
+             if (this.version < v){
+                this.obj = valeur;
+                this.version = v;
+                System.out.println("Update effectué");
+            }
+            wcb.reponse();
         }
         catch (Exception ex) {
             ex.printStackTrace();
@@ -52,10 +58,11 @@ public class SharedObject implements Serializable, SharedObject_itf {
         
     }
 
-    public void reportValue(ReadCallback rcb) {
+    public void reportValue(ReadCallback_itf rcb) {
         try {
             Client.monitor.feuVert(Client.getIdSite(),1); // ** Instrumentation
-            
+            rcb.reponse(version, obj);
+
          	// suite de la méthode reportValue... 
          	
         } catch (Exception ex) {
@@ -68,9 +75,9 @@ public class SharedObject implements Serializable, SharedObject_itf {
     // passage par Client pour que les écritures soient demandées en séquence sur le site
     public void write(Object o) {
         try {
-            Client.monitor.signaler("DE",Client.getIdSite(),id); // ** Instrumentation
+            Client.monitor.signaler("DE",Client.getIdSite(),version); // ** Instrumentation
             Client.write(id,o);
-            Client.monitor.signaler("TE",Client.getIdSite(),id); // ** Instrumentation
+            Client.monitor.signaler("TE",Client.getIdSite(),version); // ** Instrumentation
         } catch (RemoteException rex) {
             rex.printStackTrace();
         }
@@ -83,9 +90,9 @@ public class SharedObject implements Serializable, SharedObject_itf {
 
 
         try {
-            Client.monitor.signaler("DL",Client.getIdSite(),id); // ** Instrumentation
+            Client.monitor.signaler("DL",Client.getIdSite(),version); // ** Instrumentation
             Client.read(id);
-            Client.monitor.signaler("TL",Client.getIdSite(),id); // ** Instrumentation
+            Client.monitor.signaler("TL",Client.getIdSite(),version); // ** Instrumentation
             return obj;
         } catch (RemoteException rex) {
             rex.printStackTrace();
